@@ -3,7 +3,10 @@
     border: 2px solid black;
     margin-right: 2em;
     grid-area: 1 / 1 / 1 / 2;
-    display: none;
+}
+
+.parent:hover .vaporDialog {
+    transform: translate(10em, 0);
 }
 
 .parent {
@@ -22,6 +25,7 @@
     border-bottom: 1px solid black;
     border-left: 1px solid rgba(182, 182, 182, 0.973);
     border-top: 1px solid rgba(182, 182, 182, 0.973);
+    transition: all 1s;
 }
 
 .dialogTitle {
