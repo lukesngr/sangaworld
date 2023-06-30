@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar"
 import SangaWorldBanner from "./components/SangaWorldBanner";
 import ExpandableCards from "./components/ExpandableCards";
 import RNPImage from "./components/RNPImage";
+import Footer from "./components/Footer";
 
 function Home() {
     return (<>
@@ -9,6 +10,7 @@ function Home() {
     <SangaWorldBanner />
     <ExpandableCards />
     <RNPImage />
+    <Footer></Footer>
     </>)
 }
 
