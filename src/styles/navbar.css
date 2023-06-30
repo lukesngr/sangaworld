@@ -1,0 +1,40 @@
+.navList {
+    list-style-type: none;
+    border-bottom: 3px solid;
+    border-image-source: linear-gradient(to right,#ff7af8, #7acaff);
+    border-image-slice: 1;
+    height: 2em;
+    width: 100%;
+    background-color: #242321;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.firstItem {
+    margin-left: 2em !important;
+}
+
+.navItem {
+    float: left;
+    margin-left: 3em;
+    height: 2em;
+    border: 1px solid;
+    border-image-source: linear-gradient(#7acaff, #ff7af8);
+    border-image-slice: 1;
+    border-bottom: none;
+    padding-left: 1em;
+    padding-right: 1em;
+    background-color: #242321;
+}
+
+.navItem a {
+    text-decoration: none;
+    font-family: Arial;
+    color: white;
+    font-size: 1.5em;
+}
+
+.currentPage {
+    border-width: 3px;
+    border-image-source: linear-gradient(#1399f2, #f538eb) !important;
+}

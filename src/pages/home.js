@@ -1,7 +1,7 @@
 import Navbar from "./components/Navbar"
 
 function Home() {
-    return <Navbar current="home" />;
+    return <Navbar current={0} />;
 }
 
 export default Home;
