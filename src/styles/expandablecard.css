@@ -1,5 +1,5 @@
 .profilePicture {
-    box-shadow: 10px 10px 5px #ccc;
+    box-shadow: 2px 2px 2px #000000;
     border: 2px solid black;
     margin-right: 2em;
     grid-area: 1 / 1 / 1 / 2;
@@ -7,7 +7,7 @@
 
 .parent {
     display: grid;
-    grid-template-columns: 5em 1fr;
+    grid-template-columns: 35em 1fr;
     grid-template-rows: 10em 1fr;
     margin-left: 18em;
 }
@@ -15,4 +15,11 @@
 .vaporDialog {
     background-color: rgba(182, 182, 182, 0.973);
     grid-area: 1 / 2 / 2 / 2;
+    width: 20em;
+    height: fit-content;
+    padding: 2em;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    border-left: 1px solid rgba(182, 182, 182, 0.973);
+    border-top: 1px solid rgba(182, 182, 182, 0.973);
 }
