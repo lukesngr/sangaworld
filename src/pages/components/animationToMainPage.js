@@ -10,7 +10,7 @@ function AnimationToMain() {
             console.log(camera.position.z)
         }else{
             setTimeout(() => {
-                router.push("/main");
+                router.push("/home");
             }, 1000);
         }
       })
