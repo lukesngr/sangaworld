@@ -3,6 +3,8 @@
     border: 2px solid black;
     margin-right: 2em;
     grid-area: 1 / 1 / 1 / 2;
+    width: 40em;
+    height: auto;
 }
 
 .parent:hover .vaporDialog {
@@ -13,7 +15,7 @@
     display: grid;
     grid-template-columns: 35em 1fr;
     grid-template-rows: 10em 1fr;
-    margin-left: 18em;
+    margin-left: 18vw;
     margin-bottom: 35em;
 }
 
@@ -52,4 +54,64 @@
     margin-bottom: 0.1em;
     margin-right: 0.1em;
     height: 80%;
+}
+
+@media only screen and (max-width: 1300px) {
+    .parent {
+        margin-left: 10vw;
+    }
+
+    .parent:hover .vaporDialog {
+        transform: translate(7em, 0);
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .profilePicture {
+        width: 35em;
+    }
+
+    .parent {
+        grid-template-columns: 28em 1fr;
+        margin-left: 5vw;
+        margin-bottom: 25em;
+    }
+
+    .parent:hover .vaporDialog {
+        transform: translate(8em, 0);
+    }
+}
+
+@media only screen and (max-width: 955px) {
+    .profilePicture {
+        width: 30em;
+    }
+
+    .parent {
+        grid-template-columns: 28em 1fr;
+        margin-left: 5vw;
+        margin-bottom: 20em;
+    }
+
+    .parent:hover .vaporDialog {
+        transform: translate(4em, 0);
+    }
+}
+
+@media only screen and (max-width: 830px) {
+    .profilePicture {
+        width: 90%;
+    }
+
+    .parent {
+        grid-template-columns: 100% 1fr;
+        margin-left: 5vw;
+        margin-bottom: 10%;
+        width: 100%;
+    }
+
+    .vaporDialog {
+        margin-top: 60%;
+        grid-area: 2 / 1 / 2 / 2;
+    }
 }
