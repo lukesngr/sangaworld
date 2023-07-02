@@ -3,14 +3,18 @@ import Computer from "./components/Computer";
 import Background from "./components/Background";
 import AnimationToMain from "./components/AnimationToMainPage";
 import { Suspense, useEffect, useState } from "react";
+import { useRouter } from 'next/router';
 
 function LandingPage() {
     const [dpr, setDpr] = useState(1);
     const [aspectRatio, setAspectRatio] = useState(1);
+    const router = useRouter();
+    
 
     useEffect(() => {
         setDpr(window.devicePixelRatio);
         setAspectRatio(window.innerWidth / window.innerHeight);
+        router.prefetch("/home");
     }, []);
     
     return (
