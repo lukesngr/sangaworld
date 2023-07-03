@@ -1,4 +1,4 @@
-import "../../styles/expandablecard.css";
+import "../../../styles/expandablecard.css";
 import Image from "next/image";
 
 function ExpandableCards() {

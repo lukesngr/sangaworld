@@ -1,7 +1,7 @@
 import { Canvas } from "@react-three/fiber";
-import Computer from "./components/Computer";
-import Background from "./components/Background";
-import AnimationToMain from "./components/AnimationToMainPage";
+import Computer from "./components/landing/Computer";
+import Background from "./components/landing/Background";
+import AnimationToMain from "./components/landing/AnimationToMainPage";
 import { Suspense, useEffect, useState } from "react";
 import { useRouter } from 'next/router';
 

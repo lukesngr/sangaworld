@@ -1,7 +1,7 @@
-import NavbarWithBanner from "./components/NavbarWithBanner"
-import ExpandableCards from "./components/ExpandableCards";
-import RNPImage from "./components/RNPImage";
-import Footer from "./components/Footer";
+import NavbarWithBanner from "./components/pageParts/NavbarWithBanner"
+import ExpandableCards from "./components/home/ExpandableCards";
+import RNPImage from "./components/home/RNPImage";
+import Footer from "./components/pageParts/Footer";
 
 function Home() {
     return (<>

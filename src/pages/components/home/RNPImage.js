@@ -1,5 +1,5 @@
 import Image from "next/image";
-import '../../styles/rnpimage.css'
+import '../../../styles/rnpimage.css'
 
 function RNPImage() {
     return (

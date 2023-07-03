@@ -1,5 +1,4 @@
-import '../../styles/navbar.css';
-import "../../styles/banner.css";
+import '../../../styles/navbarwithbanner.css';
 import { FaBars } from "react-icons/fa";
 import { useState } from 'react';
 
