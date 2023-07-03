@@ -1,4 +1,4 @@
-import {returnValueOfPerceptron} from "../perceptronMath";
+import {returnValueOfPerceptron} from "../math/perceptronMath";
 import Perceptron from "../math/Perceptron"
 import DerivativeMath from './DerivativeMath';
 

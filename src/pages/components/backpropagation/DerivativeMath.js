@@ -1,5 +1,4 @@
-import backwardsPropagation from '../backwardprop.JPG'
-import {costFunction, derivativeOfCostOverWeight} from '../perceptronMath' 
+import {costFunction, derivativeOfCostOverWeight} from '../math/perceptronMath' 
 
 function DerivativeMath(props) {
     let derivOfCostOverHiddenWeight = derivativeOfCostOverWeight(props.x, props.a, props.z, props.y);
@@ -7,7 +6,7 @@ function DerivativeMath(props) {
         <div className="container">
             <div className="row">
                 <div className="col-md-4">
-                    <img src={backwardsPropagation}></img>
+                    <img src="backwardprop.JPG"></img>
                 </div>
                 <div className='col-md-4'>
                     <p>Cost function: {costFunction(props.x, props.y).toFixed(2)}</p>
