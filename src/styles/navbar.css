@@ -40,7 +40,38 @@
 }
 
 @media only screen and (max-width: 600px) {
-    nav {
+
+    h1 {
+        display: inline;
+    }
+
+    .mobileMenuButton {
+        margin: 2vw;
+        display: inline !important;
+    }
+
+    nav.responsive {position: relative;}
+  
+    nav.responsive .navItem {
+        float: none;
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin-left: 0 !important;
+        background-color: none;
+        border-width: 1px !important;
+    }
+
+    nav.responsive .navList {
+        background-color: none;
+        padding-left: 0;
+    }
+
+    nav.normal {
         display: none;
     }
+}
+
+.mobileMenuButton {
+    display: none;
 }
