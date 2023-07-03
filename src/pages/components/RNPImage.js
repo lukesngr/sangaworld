@@ -5,7 +5,7 @@ function RNPImage() {
     return (
         <div className="imageContainer">
             <Image src="/rnpimage.jpg" width={1000} height={700} alt="Picture of website" className="RNPImage"/>
-            <div class="overlayedText">Big Things Coming Soon</div>
+            <div className="overlayedText">Big Things Coming Soon</div>
         </div>
     )
 }

@@ -38,3 +38,9 @@
     border-width: 3px;
     border-image-source: linear-gradient(#1399f2, #f538eb) !important;
 }
+
+@media only screen and (max-width: 600px) {
+    nav {
+        display: none;
+    }
+}
