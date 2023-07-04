@@ -1,4 +1,4 @@
-import "../../../styles/links.css";
+import "../../../styles/links.scss";
 
 function Links() {
     return (

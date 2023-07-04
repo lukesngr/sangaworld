@@ -1,0 +1,80 @@
+@use 'theme';
+
+.navList {
+    list-style-type: none;
+    border-bottom: 3px solid;
+    border-image-source: linear-gradient(to right, theme.$normal-pink-color, theme.$normal-blue-color);
+    border-image-slice: 1;
+    height: 2em;
+    width: 100%;
+    background-color: theme.$base-color;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.firstItem {
+    margin-left: 2em !important;
+}
+
+.navItem {
+    float: left;
+    margin-left: 3em;
+    height: 2em;
+    border: 1px solid;
+    border-image-source: linear-gradient(theme.$normal-blue-color, theme.$normal-pink-color);
+    border-image-slice: 1;
+    border-bottom: none;
+    padding-left: 1em;
+    padding-right: 1em;
+    background-color: theme.$base-color;
+}
+
+.navItem a {
+    text-decoration: none;
+    font-family: Arial;
+    color: white;
+    font-size: 1.5em;
+}
+
+.currentPage {
+    border-width: 3px;
+    border-image-source: linear-gradient(theme.$focused-blue-color, theme.$focused-pink-color) !important;
+}
+
+.toolsDropdown {
+    display: none;
+}
+
+.toolsNav:hover .toolsDropdown {
+    display: block;
+    position: absolute;
+    background-color: theme.$base-color;
+}
+
+.toolsDropdown:hover {
+    display: block;
+    position: absolute;
+    background-color: theme.$base-color;
+}
+
+.mobileMenuButton {
+    display: none;
+}
+
+.bannerDiv h1 {
+    font-family: 'Fox Cavalier';
+    background-image: linear-gradient(theme.$focused-blue-color, theme.$dialog-color, theme.$focused-pink-color);
+    background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+    -webkit-text-stroke-width: 0.3vw;
+    -webkit-text-stroke-color: white;
+    font-size: 6vw;
+    width: fit-content;
+    margin: auto;
+}
+
+.bannerDiv {
+    width: 100%;
+    background-color: theme.$base-color;
+}
