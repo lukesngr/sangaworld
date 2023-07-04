@@ -1,0 +1,18 @@
+.linksContainer {
+    margin-top: 5em;
+    margin-bottom: 10vh;
+    border: 4px solid;
+    border-image-source: linear-gradient(#7acaff, #ff7af8);
+    border-image-slice: 1;
+    background-color: #f9f6f2;
+}
+
+.linksHeader {
+    border-image-source: linear-gradient(to left, #7acaff, #ff7af8);
+    border-image-slice: 1;
+    border-bottom: 4px solid; 
+}
+
+.badge-base__link {
+    display: none;
+}

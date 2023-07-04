@@ -2,10 +2,9 @@
     box-shadow: 2px 2px 2px #000000;
     border: 2px solid black;
     margin-right: 2em;
-    grid-area: 1 / 1 / 1 / 2;
+    grid-area: 1 / 1 / 3 / 2;
     width: 42em;
     height: auto;
-    margin-bottom: 10em;
 }
 
 .parent:hover .vaporDialog {
