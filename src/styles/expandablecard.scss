@@ -1,3 +1,5 @@
+@use 'theme';
+
 .profilePicture {
     box-shadow: 2px 2px 2px #000000;
     border: 2px solid black;
@@ -21,7 +23,7 @@
 }
 
 .vaporDialog {
-    background:#C0C0C0;
+    background: theme.$dialog-color;
     grid-area: 1 / 2 / 2 / 2;
     width: 30vw;
     height: fit-content;
@@ -32,7 +34,7 @@
 }
 
 .dialogTitle {
-    background-color: #1399f2;
+    background-color: theme.$focused-blue-color;
     margin:2px 0 0 1px;
     float:left;
     font-family:Tahoma;
@@ -52,7 +54,7 @@
     float: right;
     width: 1vw;
     height: 1vw;
-    background:#C0C0C0;
+    background: theme.$dialog-color;
     border-width: 1px;
     border-color: #FFFFFF #808080 #808080 #FFFFFF;
     padding: 0;
@@ -66,7 +68,7 @@
     margin: 2px 30% 2px 40%;
     width: 5vw;
     height: 3vw;
-    background:#C0C0C0;
+    background: theme.$dialog-color;
     border-width: 1px;
     border-color: #FFFFFF #808080 #808080 #FFFFFF;
     padding: 0;
@@ -83,71 +85,9 @@
     margin-left: 8vw;
     margin-top: 5vw;
     border: 1px solid;
-    border-image-source: linear-gradient(#7acaff, #ff7af8);
+    border-image-source: linear-gradient(theme.$normal-blue-color, theme.$normal-pink-color);
     border-image-slice: 1;
-    background-color: #242321;
+    background-color: theme.$base-color;
     color: white;
     padding: 1vw;
-}
-
-
-
-@media only screen and (max-width: 1300px) {
-    .parent {
-        margin-left: 10vw;
-    }
-
-    .parent:hover .vaporDialog {
-        transform: translate(7em, 0);
-    }
-}
-
-@media only screen and (max-width: 1100px) {
-    .profilePicture {
-        width: 35em;
-    }
-
-    .parent {
-        grid-template-columns: 28em 1fr;
-        margin-left: 5vw;
-        margin-bottom: 25em;
-    }
-
-    .parent:hover .vaporDialog {
-        transform: translate(8em, 0);
-    }
-}
-
-@media only screen and (max-width: 955px) {
-    .profilePicture {
-        width: 30em;
-    }
-
-    .parent {
-        grid-template-columns: 28em 1fr;
-        margin-left: 5vw;
-        margin-bottom: 20em;
-    }
-
-    .parent:hover .vaporDialog {
-        transform: translate(4em, 0);
-    }
-}
-
-@media only screen and (max-width: 830px) {
-    .profilePicture {
-        width: 90%;
-    }
-
-    .parent {
-        grid-template-columns: 100% 1fr;
-        margin-left: 5vw;
-        margin-bottom: 10%;
-        width: 100%;
-    }
-
-    .vaporDialog {
-        margin-top: 60%;
-        grid-area: 2 / 1 / 2 / 2;
-    }
 }

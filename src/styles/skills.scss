@@ -1,8 +1,10 @@
+@use 'theme';
+
 .skillsSplit {
     margin-top: 5em;
     margin-bottom: 10vh;
     border: 4px solid;
-    border-image-source: linear-gradient(#7acaff, #ff7af8);
+    border-image-source: linear-gradient(theme.$normal-blue-color, theme.$normal-pink-color);
     border-image-slice: 1;
 }
 
@@ -14,22 +16,22 @@
 .skillsHeader .col-md {
     padding-left: 0;
     padding-right: 0;
-    background-color: #242321;
+    background-color: theme.$base-color;
 }
 
 .workSkills {
     border: 4px solid;
-    border-image-source: linear-gradient(#7acaff, #ff7af8);
+    border-image-source: linear-gradient(theme.$normal-blue-color, theme.$normal-pink-color);
     border-image-slice: 1;
-    background-color: #f9f6f2;
+    background-color: theme.$pastel-white;
     padding: 1em;
 }
 
 .uniSkills {
     border: 4px solid;
-    border-image-source: linear-gradient(#7acaff, #ff7af8);
+    border-image-source: linear-gradient(theme.$normal-blue-color, theme.$normal-pink-color);
     border-image-slice: 1;
-    background-color: #242321;
+    background-color: theme.$base-color;
     color: white;
     padding: 1em;
 }

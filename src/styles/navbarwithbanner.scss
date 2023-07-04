@@ -49,13 +49,11 @@
     display: block;
     position: absolute;
     background-color: theme.$base-color;
+    border-image-source: linear-gradient(theme.$normal-blue-color, theme.$normal-pink-color);
+    border-image-slice: 1;
+    border: 1px solid;
 }
 
-.toolsDropdown:hover {
-    display: block;
-    position: absolute;
-    background-color: theme.$base-color;
-}
 
 .mobileMenuButton {
     display: none;
