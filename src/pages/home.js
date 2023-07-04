@@ -7,7 +7,6 @@ function Home() {
     return (<>
     <NavbarWithBanner current={0} />
     <ExpandableCards />
-    <RNPImage />
     <Footer></Footer>
     </>)
 }
