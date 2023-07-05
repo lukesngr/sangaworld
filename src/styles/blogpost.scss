@@ -1,0 +1,20 @@
+@use 'theme';
+
+.postDiv {
+    background-color: theme.$base-color;
+    color: white;
+    border-image-source: linear-gradient(theme.$normal-pink-color, theme.$normal-blue-color);
+    border-image-slice: 1;
+    border: 2px solid;
+    width: fit-content;
+    padding: 1em;
+    margin: auto;
+}
+
+.badge-primary {
+    background-color: theme.$normal-blue-color !important;
+}
+
+.badge-secondary {
+    background-color: theme.$normal-pink-color !important;
+}
