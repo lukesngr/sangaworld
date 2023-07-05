@@ -8,7 +8,10 @@ export default async function handler(req, res) {
 
     blogs.forEach(function(currentValue) {
         let data = readFileSync(currentValue, 'utf8');
-        blogData.push({path: currentValue, metaData: matter(data).data});
+        let postPath = currentValue.replace("src\\pages\\posts\\", "/blog/");
+        postPath = postPath.replace(".md", "");
+        let thumbnailPath = currentValue.replace("src\\pages\\posts\\", "/posts/").replace(".md", ".jpg");
+        blogData.push({postPath, thumbnailPath, metaData: matter(data).data});
         
     })
 
