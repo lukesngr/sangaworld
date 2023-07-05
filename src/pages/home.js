@@ -6,6 +6,7 @@ import Links from "./components/home/Links"
 
 function Home() {
     return (<>
+    <Meta siteTitle="Homepage" description="Homepage with summary of LUke Sanger's professional summary,  skills and contact points"></Meta>
     <NavbarWithBanner current={0} />
     <ExpandableCards />
     <Skills></Skills>

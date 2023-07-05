@@ -6,6 +6,7 @@ import Footer from '../components/pageParts/Footer';
 function ForwardNNVisualizer() {
     return (
     <>
+      <Meta siteTitle="Forward NN Visualizer" description="Visualizer for neural network forward propagation math, I had trouble understanding the math so I made this"></Meta>
       <NavbarWithBanner current={1}></NavbarWithBanner>
       <Intro />
       <NNVisualizer />

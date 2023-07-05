@@ -5,6 +5,7 @@ import Footer from '../components/pageParts/Footer';
 
 function BackpropagationVisualizer() {
     return(<>
+      <Meta siteTitle="Backpropagation Visualizer" description="Visualizer that helps with backpropagation math"></Meta>
       <NavbarWithBanner current={1}></NavbarWithBanner>
       <Intro />
       <NNVisualizer />
