@@ -108,3 +108,17 @@
     width: 100%;
     background-color: theme.$base-color;
 }
+
+@media only screen and (max-width: 600px) {
+    .mobileMenuButton {
+        display: inline;
+    }
+
+    .navList {
+        display: none;
+    }
+
+    nav.responsive {
+        display: block;
+    }
+}
