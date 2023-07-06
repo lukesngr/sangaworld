@@ -1,4 +1,4 @@
-import '../../../styles/skills.scss';
+import '../../styles/skills.scss';
 
 function Skills() {
     return (

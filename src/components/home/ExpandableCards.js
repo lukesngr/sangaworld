@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../../../styles/expandablecard.scss";
+import "../../styles/expandablecard.scss";
 import Image from "next/image";
 
 function ExpandableCards() {

@@ -1,4 +1,4 @@
-import '../../../styles/navbarwithbanner.scss';
+import '../../styles/navbarwithbanner.scss';
 import { FaAngleDown, FaAngleUp, FaBars } from "react-icons/fa";
 import { useState } from 'react';
 
