@@ -7,10 +7,14 @@ import { glob } from "glob";
 import '../../styles/blogpost.scss'
 
 function BlogPage(props) {
+    let isPropsEmpty = (props == {});
+    console.log(props, isPropsEmpty);
     return (
     <>
-        <Meta siteTitle={props.frontmatter.title} description={props.frontmatter.description}></Meta>
+        
         <NavbarWithBanner></NavbarWithBanner>
+        {!isPropsEmpty && <>
+        <Meta siteTitle={props.frontmatter.title} description={props.frontmatter.description}></Meta>
         <div className="postDiv">
             <h1>{props.frontmatter.title}</h1>
             <span class="badge badge-primary">{props.frontmatter.author}</span>
@@ -19,6 +23,8 @@ function BlogPage(props) {
                 {props.markdownBody.split('\r\n').map(text => {return (<>{text}<br></br></>)})}
             </p>
         </div>
+        </>}
+        {isPropsEmpty && <h1>Loading</h1>}
         <Footer></Footer>
     </>    
     )
