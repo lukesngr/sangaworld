@@ -1,6 +1,6 @@
-import Meta from "./components/pageParts/Meta";
-import NavbarWithBanner from "./components/pageParts/NavbarWithBanner";
-import Footer from "./components/pageParts/Footer";
+import Meta from "../components/pageParts/Meta";
+import NavbarWithBanner from "../components/pageParts/NavbarWithBanner";
+import Footer from "../components/pageParts/Footer";
 import { useQuery } from "react-query";
 import axios from "axios";
 import Image from 'next/image';

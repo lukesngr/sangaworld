@@ -1,8 +1,8 @@
 import matter from "gray-matter"
 import ReactMarkdown from "react-markdown"
-import NavbarWithBanner from "../components/pageParts/NavbarWithBanner";
-import Footer from "../components/pageParts/Footer";
-import Meta from "../components/pageParts/Meta";
+import NavbarWithBanner from "../../components/pageParts/NavbarWithBanner";
+import Footer from "../../components/pageParts/Footer";
+import Meta from "../../components/pageParts/Meta";
 import { glob } from "glob";
 import '../../styles/blogpost.scss'
 

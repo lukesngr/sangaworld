@@ -1,8 +1,8 @@
-import Intro from '../components/backpropagation/Intro';
-import NNVisualizer from '../components/backpropagation/NNVisualizer';
-import NavbarWithBanner from '../components/pageParts/NavbarWithBanner';
-import Footer from '../components/pageParts/Footer';
-import Meta from '../components/pageParts/Meta';
+import Intro from '../../components/backpropagation/Intro';
+import NNVisualizer from '../../components/backpropagation/NNVisualizer';
+import NavbarWithBanner from '../../components/pageParts/NavbarWithBanner';
+import Footer from '../../components/pageParts/Footer';
+import Meta from '../../components/pageParts/Meta';
 import "../../styles/aitoolssimple.scss";
 
 function BackpropagationVisualizer() {
