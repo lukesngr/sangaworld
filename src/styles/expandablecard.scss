@@ -10,12 +10,12 @@
 }
 
 .parent:hover .vaporDialog {
-    transform: translate(10em, 0);
+    transform: translate(7em, 0);
 }
 
 .parent {
     display: grid;
-    grid-template-columns: 35em 1fr;
+    grid-template-columns: 35vw 1fr;
     grid-template-rows: 10em 1fr;
     margin-left: 18vw;
     margin-top: 3vh;
@@ -78,32 +78,11 @@
     text-align: center;
 }
 
-.professionalSummary {
-    grid-area: 2 / 2 / 2 / 2;
-    font-size: 0.8em;
-    width: 40vw;
-    margin-left: 8vw;
-    margin-top: 5vw;
-    border: 1px solid;
-    border-image-source: linear-gradient(theme.$normal-blue-color, theme.$normal-pink-color);
-    border-image-slice: 1;
-    background-color: theme.$base-color;
-    color: white;
-    padding: 1vw;
-}
-
 @media only screen and (max-width: 600px) {
     .vaporDialog {
         grid-area: 2 / 1 / 2 / 2;
         margin-top: 41vw;
         width: 80vw;
-    }
-
-    .professionalSummary {
-        grid-area: 2 / 1 / 2 / 2;
-        margin-top: 97vw;
-        width: 80vw;
-        margin-left: 0;
     }
 
     .parent {

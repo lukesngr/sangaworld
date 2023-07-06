@@ -112,13 +112,23 @@
 @media only screen and (max-width: 600px) {
     .mobileMenuButton {
         display: inline;
+        padding-bottom: 1vh;
     }
 
-    .navList {
+    nav.normal {
         display: none;
     }
 
     nav.responsive {
-        display: block;
+        position: relative;
+        overflow: hidden;
     }
+
+    nav.responsive .navItem{
+        display: block;
+        width: 100%;
+        margin-left: 0 !important;
+    }
+
+    .navList { padding-left: 0;}
 }
