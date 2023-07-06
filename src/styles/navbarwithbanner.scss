@@ -21,8 +21,8 @@
     margin-left: 3em;
     height: 2em;
     border: 1px solid;
-    border-image-source: linear-gradient(theme.$normal-blue-color, theme.$normal-pink-color);
-    border-image-slice: 1;
+    border-image-source: linear-gradient(theme.$normal-blue-color, theme.$normal-pink-color)  !important;
+    border-image-slice: 1 !important;
     border-bottom: none;
     padding-left: 1em;
     padding-right: 1em;
