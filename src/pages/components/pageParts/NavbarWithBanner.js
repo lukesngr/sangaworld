@@ -1,23 +1,50 @@
 import '../../../styles/navbarwithbanner.scss';
-import { FaBars } from "react-icons/fa";
+import { FaAngleDown, FaAngleUp, FaBars } from "react-icons/fa";
 import { useState } from 'react';
 
 function NavElement(props) {
+    let displayStyleForDropdownExpand = "none";
+    if(props.navClass == "responsive") {
+        displayStyleForDropdownExpand = "inline";
+    }
+
+    const [isToolDropDownDisplayed, setIsToolDropDownDisplayed] = useState(false);
+    
+    function toggleDropDown() {
+        if(isToolDropDownDisplayed) {
+            setIsToolDropDownDisplayed(false);
+        }else{
+            setIsToolDropDownDisplayed(true);
+        }
+    }
+    
     return (
     <nav className={props.navClass}>
         <ul className="navList">
             <li className={props.itemStyles[0]}><a href="/home">Home</a></li>
             <li className={props.itemStyles[1]}>
                 <a href="#">Tools</a>
-                <ul className="toolsDropdown">
+                {isToolDropDownDisplayed && <FaAngleUp className="text-right" onClick={toggleDropDown} size={30} 
+                    fill={'white'} style={{display: displayStyleForDropdownExpand, float: "right"}}/> }
+                {!isToolDropDownDisplayed && <FaAngleDown className="text-right" onClick={toggleDropDown} size={30} 
+                    fill={'white'} style={{display: displayStyleForDropdownExpand, float: "right"}}/> }
+                {!isToolDropDownDisplayed && <ul className="toolsDropdown">
                     <li>
                         <a href="/tools/backprop">Backpropagation Visualizer</a>
                     </li>
                     <li>
                         <a href="/tools/forwardnnvisualizer">NN Visualizer</a>
                     </li>
-                </ul>
+                </ul> }
             </li>
+            {isToolDropDownDisplayed && <ul className="toolsDropdown" style={{dispaly: "inline"}}>
+                    <li>
+                        <a href="/tools/backprop">Backpropagation Visualizer</a>
+                    </li>
+                    <li>
+                        <a href="/tools/forwardnnvisualizer">NN Visualizer</a>
+                    </li>
+                </ul> }
             <li className={props.itemStyles[2]}><a href="/blog">Blog</a></li>
         </ul>
     </nav>)

@@ -41,7 +41,7 @@
     border-image-source: linear-gradient(theme.$focused-blue-color, theme.$focused-pink-color) !important;
 }
 
-.toolsDropdown {
+li .toolsDropdown {
     display: none;
     width: fit-content;
     padding-left: 0;
@@ -59,7 +59,7 @@
     transform: translate(-3em, -0.3em);
 }
 
-.toolsDropdown:hover {
+li .toolsDropdown:hover {
     display: block;
     position: absolute;
     background-color: theme.$base-color;
@@ -76,7 +76,7 @@
     }
 }
 
-.toolsDropdown:hover li {
+li .toolsDropdown:hover li {
     border-image-source: linear-gradient(theme.$normal-blue-color, theme.$normal-pink-color) !important;
     border-image-slice: 1 !important;
     border: 1px solid;
@@ -131,4 +131,32 @@
     }
 
     .navList { padding-left: 0;}
+
+    .toolsDropdown a {
+        text-decoration: none;
+        font-family: Arial;
+        color: white;
+        font-size: 1em;
+        padding-left: 5vw;
+    }
+
+    .toolsDropdown li {
+        background-color: theme.$base-color;
+        list-style-type: none;
+        border-image-source: linear-gradient(theme.$normal-blue-color, theme.$normal-pink-color) !important;
+        border-image-slice: 1 !important;
+        border: 1px solid;
+    }
+
+    .toolsDropdown {
+        padding-left: 0;
+    }
+
+    .toolsNav {
+        border-bottom: 1px solid;
+    }
+
+    .bannerDiv h1 {
+        display: inline;
+    }
 }

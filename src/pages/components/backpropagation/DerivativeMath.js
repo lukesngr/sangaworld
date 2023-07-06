@@ -6,7 +6,7 @@ function DerivativeMath(props) {
         <div className="container">
             <div className="row">
                 <div className="col-md-4">
-                    <img src="backwardprop.JPG"></img>
+                    <img src="/backwardprop.JPG"></img>
                 </div>
                 <div className='col-md-4'>
                     <p>Cost function: {costFunction(props.x, props.y).toFixed(2)}</p>
