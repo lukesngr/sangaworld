@@ -9,6 +9,9 @@
     width: fit-content;
     padding: 1em;
     margin: auto;
+    p {
+        white-space: pre;
+    }
 }
 
 .badge-primary {

@@ -1,30 +1,27 @@
-import matter from "gray-matter"
 import ReactMarkdown from "react-markdown"
 import NavbarWithBanner from "../../components/pageParts/NavbarWithBanner";
 import Footer from "../../components/pageParts/Footer";
 import Meta from "../../components/pageParts/Meta";
-import { glob } from "glob";
 import '../../styles/blogpost.scss'
 import { PrismaClient } from '@prisma/client'
+import { useEffect } from "react";
 
 const prisma = new PrismaClient()
 
 function BlogPage(props) {
     let isPropsEmpty = (props == {});
-    console.log(props, isPropsEmpty);
+    let content = JSON.parse(props.content);
     return (
     <>
         
         <NavbarWithBanner></NavbarWithBanner>
         {!isPropsEmpty && <>
-        <Meta siteTitle={props.frontmatter.title} description={props.frontmatter.description}></Meta>
+        <Meta siteTitle={content.title} description={content.description}></Meta>
         <div className="postDiv">
-            <h1>{props.frontmatter.title}</h1>
-            <span class="badge badge-primary">{props.frontmatter.author}</span>
-            <span class="badge badge-secondary">{props.frontmatter.date}</span>
-            <p>
-                {props.markdownBody.split('\r\n').map(text => {return (<>{text}<br></br></>)})}
-            </p>
+            <h1>{content.title}</h1>
+            <span class="badge badge-primary">{content.author}</span>
+            <span class="badge badge-secondary">{content.date}</span>
+            <ReactMarkdown>{content.content}</ReactMarkdown>
         </div>
         </>}
         {isPropsEmpty && <h1>Loading</h1>}
@@ -40,18 +37,18 @@ export async function getStaticProps(context) {
             postName: post
         }
     })
+    const stringifiedData = JSON.stringify(content);
   
     return {
       props: {
-        content
+        content: stringifiedData
       }
     }
 }
   
   export async function getStaticPaths() {
     const blogPosts = await prisma.posts.findMany();
-    const postNames = blogPosts.postName;
-    const paths = postNames.map(post => { return { params: { post: post } } })
+    const paths = blogPosts.map(post => { return { params: { post: post.postName } } })
 
     return {
         paths,

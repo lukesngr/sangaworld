@@ -12,9 +12,9 @@ datasource db {
 
 model Posts {
   id          Int      @id @default(autoincrement())
-  title       String   @unique
+  title       String 
   date        DateTime  
   description String
   content     String
-  postName    String
+  postName    String   @unique
 }
