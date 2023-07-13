@@ -4,7 +4,6 @@ import Footer from "../../components/pageParts/Footer";
 import Meta from "../../components/pageParts/Meta";
 import '../../styles/blogpost.scss'
 import { PrismaClient } from '@prisma/client'
-import { useEffect } from "react";
 
 const prisma = new PrismaClient()
 

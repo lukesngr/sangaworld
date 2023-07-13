@@ -1,17 +1,15 @@
-import { glob } from "glob";
-import { readFileSync } from "fs";
-import matter from "gray-matter";
+import { PrismaClient } from '@prisma/client'
+
+const prisma = new PrismaClient()
 
 export default async function handler(req, res) {
-    const blogs = glob.sync(`src/pages/posts/*.md`)
+    const blogs = await prisma.posts.findMany();
     var blogData = [];
 
-    blogs.forEach(function(currentValue) {
-        let data = readFileSync(currentValue, 'utf8');
-        let postPath = currentValue.replace("src\\pages\\posts\\", "/blog/");
-        postPath = postPath.replace(".md", "");
-        let thumbnailPath = currentValue.replace("src\\pages\\posts\\", "/posts/").replace(".md", ".jpg");
-        blogData.push({postPath, thumbnailPath, metaData: matter(data).data});
+    blogs.forEach(function(post) {
+        
+        blogData.push({postPath: "/blog/"+post.postName, thumbnailPath: "/posts/"+post.postName+".JPG", 
+        metaData: {author: post.author, date: post.date, title: post.title, description: post.description}});
         
     })
 
