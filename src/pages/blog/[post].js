@@ -5,6 +5,9 @@ import Footer from "../../components/pageParts/Footer";
 import Meta from "../../components/pageParts/Meta";
 import { glob } from "glob";
 import '../../styles/blogpost.scss'
+import { PrismaClient } from '@prisma/client'
+
+const prisma = new PrismaClient()
 
 function BlogPage(props) {
     let isPropsEmpty = (props == {});
@@ -32,30 +35,23 @@ function BlogPage(props) {
 
 export async function getStaticProps(context) {
     const { post } = context.params
-    const content = await import(`../posts/${post}.md`)
-    const data = matter(content.default)
+    const content = await prisma.posts.findUnique({
+        where: {
+            postName: post
+        }
+    })
   
     return {
       props: {
-        frontmatter: data.data,
-        markdownBody: data.content,
+        content
       }
     }
 }
   
   export async function getStaticPaths() {
-
-    const blogs = glob.sync(`posts/**/*.md`)
-
-    const blogPosts = blogs.map(file =>
-        file
-        .split('/')[1]
-        .replace(/ /g, '-')
-        .slice(0, -3)
-        .trim()
-    )
-
-    const paths = blogPosts.map(post => { return { params: { post: post } } })
+    const blogPosts = await prisma.posts.findMany();
+    const postNames = blogPosts.postName;
+    const paths = postNames.map(post => { return { params: { post: post } } })
 
     return {
         paths,
