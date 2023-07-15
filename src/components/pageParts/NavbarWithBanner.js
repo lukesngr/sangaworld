@@ -53,7 +53,7 @@ function NavElement(props) {
 function Banner(props) {
     return (
         <div className="bannerDiv">
-            <FaBars className="text-left mobileMenuButton" onClick={props.onClickFunction} size={30} fill={props.fill}/>
+            <FaBars className="text-left mobileMenuButton" onClick={props.onClickFunction} size={40} fill={props.fill}/>
             <h1>SangaWorld</h1>
         </div>
     )
