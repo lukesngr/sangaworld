@@ -1,9 +1,8 @@
-import { useState } from "react";
-import "../../styles/expandablecard.scss";
+import "../../styles/dialogboxprofile.scss";
 import Image from "next/image";
 import { FaTimesCircle, FaMinusCircle } from "react-icons/fa";
 
-function ExpandableCards() {
+function DialogBoxProfile() {
 
     return (
     <div className="vaporDialog">
@@ -21,4 +20,4 @@ function ExpandableCards() {
     )
 }
 
-export default ExpandableCards;
+export default DialogBoxProfile;
