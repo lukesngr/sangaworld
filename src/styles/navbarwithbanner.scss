@@ -91,6 +91,11 @@ li .toolsDropdown:hover li {
     display: none;
 }
 
+@font-face {
+    font-family: 'Fox Cavalier';
+    src: url("/FoxCavalier.ttf");
+}
+
 .bannerDiv h1 {
     font-family: 'Fox Cavalier';
     background-image: linear-gradient(theme.$focused-blue-color, theme.$dialog-color, theme.$focused-pink-color);
