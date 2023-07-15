@@ -120,14 +120,15 @@ li .toolsDropdown:hover li {
     }
 
     nav.responsive {
-        position: relative;
-        overflow: hidden;
+        position: absolute;
+        width: 100%;
     }
 
     nav.responsive .navItem{
         display: block;
         width: 100%;
         margin-left: 0 !important;
+        height: 10vw;
     }
 
     .navList { padding-left: 0;}

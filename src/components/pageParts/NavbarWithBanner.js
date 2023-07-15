@@ -24,9 +24,9 @@ function NavElement(props) {
             <li className={props.itemStyles[0]}><a href="/home">Home</a></li>
             <li className={props.itemStyles[1]}>
                 <a href="#">Tools</a>
-                {isToolDropDownDisplayed && <FaAngleUp className="text-right" onClick={toggleDropDown} size={30} 
+                {isToolDropDownDisplayed && <FaAngleUp className="text-right" onClick={toggleDropDown} size={40} 
                     fill={'white'} style={{display: displayStyleForDropdownExpand, float: "right"}}/> }
-                {!isToolDropDownDisplayed && <FaAngleDown className="text-right" onClick={toggleDropDown} size={30} 
+                {!isToolDropDownDisplayed && <FaAngleDown className="text-right" onClick={toggleDropDown} size={40} 
                     fill={'white'} style={{display: displayStyleForDropdownExpand, float: "right"}}/> }
                 {!isToolDropDownDisplayed && <ul className="toolsDropdown">
                     <li>
