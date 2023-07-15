@@ -64,26 +64,19 @@
 
 
 
-/*@media only screen and (max-width: 600px) {
-    .vaporDialog {
-        grid-area: 2 / 1 / 2 / 2;
-        margin-top: 41vw;
-        width: 80vw;
-    }
+@media only screen and (max-width: 900px) {
+   .vaporDialog {
+       width: 80%;
+       max-width: none !important;
+   }
 
-    .parent {
-        grid-template-columns: 35em 1fr;
-        grid-template-rows: 10em 1fr;
-        margin-left: 10vw;
-    }
+   .dialogContent {
+        width: 100%;
+        max-width: none !important;
+   }
 
-    .profilePicture {
-        max-width: 80vw;
-        height: auto;
-    }
-
-    .parent:hover .vaporDialog {
-        transform: none;
-    }
-
-  }*/
+   .profilePicture {
+        width: 100%;
+        max-width: none !important;
+   }
+}
