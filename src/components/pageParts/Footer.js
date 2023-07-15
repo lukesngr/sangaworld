@@ -2,7 +2,7 @@ import { FaLinkedin, FaGithub, FaMedium } from "react-icons/fa";
 import '../../styles/footer.scss';
 
 function Footer() {
-    const ICON_SIZE = 50;
+    const ICON_SIZE = 40;
     return (
     <div className="hstack gap-3 footerDiv">
         <a className="linkedinLink" href="https://www.linkedin.com/in/luke-sanger-43b33420b/"><FaLinkedin size={ICON_SIZE}></FaLinkedin></a>
