@@ -15,12 +15,11 @@ function Blog(props) {
         .then((res) => res.data)
     );
 
-    if(true) {
+    if(isLoading) {
         return <Loading></Loading>;
     }
 
     const blogData = data.blogData;
-    console.log(blogData);
     
     return (
     <>
