@@ -3,3 +3,16 @@
 body {
     background-color: theme.$base-color;
 }
+
+@keyframes loading {
+    0%   {transform: translate(0,0)}
+    100% {transform: translate(900%,0)}
+}
+
+img {
+    animation-name: loading;
+    animation-duration: 4s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    width: 10%;
+}
