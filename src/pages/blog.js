@@ -5,6 +5,7 @@ import { useQuery } from "react-query";
 import axios from "axios";
 import Image from 'next/image';
 import '../styles/posts.scss';
+import Loading from "../components/pageParts/Loading";
 
 function Blog(props) {
 
@@ -14,8 +15,8 @@ function Blog(props) {
         .then((res) => res.data)
     );
 
-    if(isLoading) {
-        return (<h1>Loading</h1>);
+    if(true) {
+        return <Loading></Loading>;
     }
 
     const blogData = data.blogData;
