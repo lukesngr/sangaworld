@@ -5,28 +5,8 @@ import { FaTimesCircle, FaMinusCircle } from "react-icons/fa";
 
 function DialogBoxProfile() {
 
-    var clickedOn = false;
-    var initialPointerX = -1000;
-    var initialPointerY = -1000;
-    const [transformX, setTransformX] = useState(0);
-    const [transformY, setTransformY] = useState(0);
-    function dialogBoxMover(e, type) {
-        if(type == "click") {
-            if(clickedOn) { clickedOn = false; }
-            else{ clickedOn = true; }
-        }else if(type == "move" && clickedOn) {
-            if(initialPointerX == -1000) {initialPointerX = e.clientX;}
-            if(initialPointerY == -1000) {initialPointerY = e.clientY;}
-            setTransformX(e.clientX - initialPointerX);
-            setTransformY(e.clientY - initialPointerY);
-            initialPointerX = e.clientX;
-            initialPointerY = e.clientY;
-            console.log(e.clientY - initialPointerX);
-        }
-    }
-
     return (
-    <div className="vaporDialog" onClick={(e) => dialogBoxMover(e, "click")} onMouseMove={(e) => dialogBoxMover(e, "move")} style={{transform: (transformX, transformY)}}>
+    <div className="vaporDialog">
         <div className="dialogTitle">
             About Me <FaTimesCircle className="fakeExitButton" size={30} /><FaMinusCircle className="fakeMinusButton" size={30} />
         </div>
