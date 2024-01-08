@@ -18,7 +18,6 @@ function Skills() {
                         <li>POS and Kiosks</li>
                         <li>Gathering technical requirements from non-technical colleagues</li>
                         <li>How a company works in an office setting</li>
-                        <li>Career progression</li>
                     </ul>
                 </div>
                 <div className="col-md uniSkills">
@@ -31,6 +30,8 @@ function Skills() {
                         <li>React</li>
                         <li>Machine learning</li>
                         <li>Neural Networks</li>
+                        <li>Microservices</li>
+                        <li>AWS</li>
                     </ul>
                 </div>
             </div>
