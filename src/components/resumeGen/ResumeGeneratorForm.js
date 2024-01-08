@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import '../../styles/resumegenerator.scss';
+import axios from 'axios';
 
 export default function ResumeGeneratorForm() {
     const [professionalSummary, setProfessionalSummary] = useState("");
@@ -15,10 +16,27 @@ export default function ResumeGeneratorForm() {
     const [degreeName, setDegreeName] = useState("");
     const [university, setUniversity] = useState("");
     const [certifications, setCertifications] = useState("");
-    console.log(skills)
+    
+    function handleSubmit(e) {
+        e.preventDefault();
+        axios.get('/api/generatePDF', {
+            responseType: 'blob',
+            params: {
+              professionalSummary, name, number, email, location, skills, workExpTime, workExpLoc, workExpRole, graduationDate, degreeName, university
+            }
+          })
+          .then(function (response) {
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(new Blob([response.data]));
+            link.download = 'generated-pdf.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+          })
+    }
 
     return (
-        <form className="resumeGeneratorForm">
+        <form onSubmit={handleSubmit} className="resumeGeneratorForm">
             <h1>Resume Generator</h1>
             <h4>Basic Details</h4>
             <label htmlFor='name'>Full Name:</label>
