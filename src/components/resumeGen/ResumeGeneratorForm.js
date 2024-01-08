@@ -3,6 +3,7 @@ import '../../styles/resumegenerator.scss';
 
 export default function ResumeGeneratorForm() {
     const [professionalSummary, setProfessionalSummary] = useState("");
+    const [name, setName] = useState("");
     const [number, setNumber] = useState("");
     const [email, setEmail] = useState("");
     const [location, setLocation] = useState("");
@@ -14,11 +15,14 @@ export default function ResumeGeneratorForm() {
     const [degreeName, setDegreeName] = useState("");
     const [university, setUniversity] = useState("");
     const [certifications, setCertifications] = useState("");
+    console.log(skills)
 
     return (
-        <form class="resumeGeneratorForm">
+        <form className="resumeGeneratorForm">
             <h1>Resume Generator</h1>
             <h4>Basic Details</h4>
+            <label htmlFor='name'>Full Name:</label>
+            <input name="name" type="text" value={name} onChange={(e) => setName(e.target.value)}></input><br />
             <label htmlFor='phone'>Phone Number:</label>
             <input name="phone" type="phone" value={number} onChange={(e) => setNumber(e.target.value)}></input><br />
             <label htmlFor='email'>Email:</label>

@@ -1,12 +1,13 @@
 import generatePdf from '../../utils/generatePdf';
 import puppeteer from 'puppeteer';
+import PDFTemplate from '@/src/components/resumeGen/PDFTemplate';
+import { renderToStaticMarkup } from 'react-dom/server';
 
 export default async function handler(req, res) {
     const data = req.body;
-      
-    
 
     try {
+        let htmlContent = renderToStaticMarkup(<PDFTemplate props={data}></PDFTemplate>)
         const browser = await puppeteer.launch();
         const page = await browser.newPage();
         await page.setContent(htmlContent, { waitUntil: 'networkidle0' });
