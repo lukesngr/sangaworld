@@ -5,7 +5,7 @@ import { renderToStaticMarkup } from 'react-dom/server';
 export default async function handler(req, res) {
 
     try {
-        let htmlContent = renderToStaticMarkup(<PDFTemplate props={req.query}></PDFTemplate>)
+        let htmlContent = renderToStaticMarkup(<PDFTemplate {...req.query}></PDFTemplate>)
         const browser = await puppeteer.launch();
         const page = await browser.newPage();
         await page.setContent(htmlContent, { waitUntil: 'networkidle0' });

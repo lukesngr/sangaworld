@@ -1,6 +1,7 @@
 import '../../styles/resume.css';
 
 export default function PDFTemplate(props) {
+    console.log(props);
     return (<html>
         <head>
             <script src="https://kit.fontawesome.com/793a493ac1.js" crossorigin="anonymous"></script>
@@ -13,14 +14,14 @@ export default function PDFTemplate(props) {
             <div class="container">
                 <div class="row">
                     <div class="col-4 sidebar">
-                        {props.name.split(' ').map(namePart => (<h1>{namePart}</h1>))}
+                        {/*props.name.split(' ').map(namePart => (<h1>{namePart}</h1>))*/}
                         <p class="sidebarHeading">CONTACT</p>
                         <p><i class="fa-solid fa-phone"></i>{props.number}</p>
                         <p><i class="fa-solid fa-envelope"></i>{props.email}</p>
                         <p><i class="fa-solid fa-location-dot"></i>{props.location}</p>
                         <p class="sidebarHeading">SKILLS</p>
                         <ul>
-                            {props.skills.split('\n').map(skill => (<li>{skill}</li>))}
+                            {/*props.skills.split('\n').map(skill => (<li>{skill}</li>))*/}
                         </ul>
                     </div>
                     <div class="col mainpart">
