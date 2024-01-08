@@ -35,6 +35,9 @@ function NavElement(props) {
                     <li>
                         <a href="/tools/forwardnnvisualizer">NN Visualizer</a>
                     </li>
+                    <li>
+                        <a href="/tools/resumegen">Resume Generator</a>
+                    </li>
                 </ul> }
             </li>
             {isToolDropDownDisplayed && <ul className="toolsDropdown" style={{dispaly: "inline"}}>
@@ -43,6 +46,9 @@ function NavElement(props) {
                     </li>
                     <li>
                         <a href="/tools/forwardnnvisualizer">NN Visualizer</a>
+                    </li>
+                    <li>
+                        <a href="/tools/resumegen">Resume Generator</a>
                     </li>
                 </ul> }
         </ul>

@@ -16,7 +16,7 @@ export default function ResumeGeneratorForm() {
     const [certifications, setCertifications] = useState("");
 
     return (
-        <form>
+        <form class="resumeGeneratorForm">
             <h1>Resume Generator</h1>
             <h4>Basic Details</h4>
             <label htmlFor='phone'>Phone Number:</label>
