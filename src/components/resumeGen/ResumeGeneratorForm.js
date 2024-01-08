@@ -45,5 +45,6 @@ export default function ResumeGeneratorForm() {
             <input name="university" type="text" value={university} onChange={(e) => setUniversity(e.target.value)}></input><br />
             <label htmlFor='certifications'>Certifications:</label><br />
             <textarea name="certifications" type="text" rows="4" cols="50" value={certifications} onChange={(e) => setCertifications(e.target.value)}></textarea><br />
+            <button type='submit'>Generate</button>
         </form> );
 }
