@@ -114,7 +114,7 @@ export default function PDFTemplate(props) {
                         <p>{props.university}</p>
                         <p className="mainHeading">CERTIFICATIONS</p>
                         <ul>
-                            <li>Meta Front-end Developer</li>
+                            {props.certifications.split('\n').map(certification => (<li>{certification}</li>))}
                         </ul>
                     </div>
             </div>
