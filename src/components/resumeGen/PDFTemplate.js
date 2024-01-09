@@ -32,7 +32,7 @@ export default function PDFTemplate(props) {
                 color: white;
             }
             
-            .sidebar i {
+            .sidebar svg {
                 margin-right: 5px;
             }
             
@@ -79,6 +79,8 @@ export default function PDFTemplate(props) {
                 margin-bottom: 0;
                 color: darkslategray;
             }
+             
+            
             `}
             </style>
             
