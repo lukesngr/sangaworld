@@ -17,6 +17,7 @@ function DialogBoxProfile() {
         My interests aren't just limited to academia and professional work - I also have a keen enthusiasm for AI and Web Development that goes beyond the classroom. <br />
         Outside of tech, I am an ardent fan of Hardstyle and Vaporwave music genres. <br />
         </p>
+        <a href="/myresume.pdf" target='_blank' rel='noopener noreferrer'>Download Resume</a>
     </div>
     )
 }
