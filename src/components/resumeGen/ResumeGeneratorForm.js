@@ -42,6 +42,7 @@ export default function ResumeGeneratorForm() {
     return (
         <form onSubmit={handleSubmit} className="resumeGeneratorForm">
             <h1>Resume Generator</h1>
+            <p>Generator I used to generate my resume</p>
             <h4>Basic Details</h4>
             <label htmlFor='name'>Full Name:</label>
             <input name="name" type="text" value={name} onChange={(e) => setName(e.target.value)}></input><br />
