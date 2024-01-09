@@ -1,7 +1,7 @@
+import { FaEnvelope, FaPhone, FaMap } from "react-icons/fa";
 export default function PDFTemplate(props) {
     console.log(props);
     return (<>
-            <script src="https://kit.fontawesome.com/793a493ac1.js" crossorigin="anonymous"></script>
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"></link>
             <style>
             {`
@@ -17,6 +17,7 @@ export default function PDFTemplate(props) {
             body {
                 margin: 0;
                 height: 100%;
+                width: 702px;
             }
 
             
@@ -86,9 +87,9 @@ export default function PDFTemplate(props) {
                     <div style={{backgroundColor: "#0081FB"}}className="col-4 sidebar">
                         {props.name.split(' ').map(namePart => (<h1>{namePart}</h1>))}
                         <p className="sidebarHeading">CONTACT</p>
-                        <p><i className="fa-solid fa-phone"></i>{props.number}</p>
-                        <p><i className="fa-solid fa-envelope"></i>{props.email}</p>
-                        <p><i className="fa-solid fa-location-dot"></i>{props.location}</p>
+                        <p><FaPhone size={20}></FaPhone>{props.number}</p>
+                        <p><FaEnvelope size={20}></FaEnvelope>{props.email}</p>
+                        <p><FaMap size={20}></FaMap>{props.location}</p>
                         <p className="sidebarHeading">SKILLS</p>
                         <ul>
                             {props.skills.split('\n').map(skill => (<li>{skill}</li>))}
