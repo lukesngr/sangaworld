@@ -14,8 +14,6 @@ export default async function handler(req, res) {
             deviceScaleFactor: 1,
         })
         await page.setContent(htmlContent, { waitUntil: 'load' });
-        const contentToDEbug = await page.content();
-        console.log(contentToDEbug);
         const pdfBuffer = await page.pdf({ format: 'A4', printBackground: true, scale: 1.3 });
         await browser.close();
 
