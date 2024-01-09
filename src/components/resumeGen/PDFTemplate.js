@@ -17,7 +17,6 @@ export default function PDFTemplate(props) {
             body {
                 margin: 0;
                 height: 100%;
-                width: 702px;
             }
 
             
@@ -49,7 +48,8 @@ export default function PDFTemplate(props) {
                 padding-left: 0 !important;
                 margin-left: 0 !important;
                 margin-right: 0 !important;
-                max-width: 100% !important;
+                min-width: 100% !important;
+                max-width: 600px;
             }
             
             .mainpart {
