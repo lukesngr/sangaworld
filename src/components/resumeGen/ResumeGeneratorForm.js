@@ -1,6 +1,9 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { renderToStaticMarkup } from 'react-dom/server';
+import PDFTemplate from './PDFTemplate';
 import '../../styles/resumegenerator.scss';
 import axios from 'axios';
+import jsPDF from 'jspdf';
 
 export default function ResumeGeneratorForm() {
     const [professionalSummary, setProfessionalSummary] = useState("");
@@ -16,6 +19,26 @@ export default function ResumeGeneratorForm() {
     const [degreeName, setDegreeName] = useState("");
     const [university, setUniversity] = useState("");
     const [certifications, setCertifications] = useState("");
+
+    useEffect(() => {
+      let newProps = {professionalSummary: 'iouoiuoi',
+      name: 'Luke Sanger',
+      number: '0475868381',
+      email: 'lukesngr@gmail.com',
+      location: 'Heathcote',
+      skills: 'React\nAWS',
+      workExpTime: 'fdsfds',
+      workExpLoc: 'dasd',
+      workExpRole: 'dasdas',
+      graduationDate: 'dasdas',
+      degreeName: 'dsadas',
+      university: 'dasdas'
+    };
+
+      let markup = renderToStaticMarkup(<PDFTemplate {...newProps}></PDFTemplate>);
+
+      
+    }, []);
     
     function handleSubmit(e) {
         e.preventDefault();

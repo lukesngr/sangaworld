@@ -48,7 +48,7 @@ export default function PDFTemplate(props) {
                 padding-left: 0 !important;
                 margin-left: 0 !important;
                 margin-right: 0 !important;
-                max-width: 100% !important;
+                min-width: 100% !important;
             }
             
             .mainpart {
