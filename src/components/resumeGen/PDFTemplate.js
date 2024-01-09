@@ -103,10 +103,7 @@ export default function PDFTemplate(props) {
                         <b>{props.workExpRole}</b>
                         <p>{props.workExpLoc}</p>
                         <ul>
-                            <li>Cinema POS and Kiosk - Software Troubleshooting, Configuration and Deployment</li>
-                            <li>Corporate Office support including Wi-Fi troubleshooting</li>
-                            <li>Powershell scripting and configuration of Android-based scanners</li>
-                            <li>Communication and collaboration in a team</li>
+                            {props.workExpDotpoints.split('\n').map(workExpDotpoint => (<li>{workExpDotpoint}</li>))}
                         </ul>
                         <p className="mainHeading">EDUCATION</p>
                         <p className="experienceTime">{props.graduationDate}</p>

@@ -15,6 +15,7 @@ export default function ResumeGeneratorForm() {
     const [workExpTime, setWorkExpTime] = useState("");
     const [workExpRole, setWorkExpRole] = useState("");
     const [workExpLoc, setWorkExpLoc] = useState("");
+    const [workExpDotpoints, setWorkExpDotpoints] = useState("");
     const [graduationDate, setGraduationDate] = useState("");
     const [degreeName, setDegreeName] = useState("");
     const [university, setUniversity] = useState("");
@@ -25,7 +26,7 @@ export default function ResumeGeneratorForm() {
         axios.get('/api/generatePDF', {
             responseType: 'blob',
             params: {
-              professionalSummary, name, number, email, location, skills, workExpTime, workExpLoc, workExpRole, graduationDate, degreeName, university, certifications
+              professionalSummary, name, number, email, location, skills, workExpTime, workExpLoc, workExpRole, graduationDate, degreeName, university, certifications, workExpDotpoints
             }
           })
           .then(function (response) {
@@ -61,6 +62,8 @@ export default function ResumeGeneratorForm() {
             <input name="workExpRole" type="text" value={workExpRole} onChange={(e) => setWorkExpRole(e.target.value)}></input><br />
             <label htmlFor='workExpLoc'>Work Experience Location:</label>
             <input name="workExpLoc" type="text" value={workExpLoc} onChange={(e) => setWorkExpLoc(e.target.value)}></input><br />
+            <label htmlFor='workExpDotpoints'>Skills Learned During Work Experience:</label><br />
+            <textarea name="workExpDotpoints" type="text" rows="4" cols="50" value={workExpDotpoints} onChange={(e) => setWorkExpDotpoints(e.target.value)}></textarea><br />
             <h4>Education</h4>
             <label htmlFor='graduationDate'>Graduation Date:</label>
             <input name="graduationDate" type="text" value={graduationDate} onChange={(e) => setGraduationDate(e.target.value)}></input><br />
