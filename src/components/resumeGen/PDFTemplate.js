@@ -1,8 +1,8 @@
-import { FaEnvelope, FaPhone, FaLocationArrow } from "react-icons/fa";
-
 export default function PDFTemplate(props) {
     console.log(props);
     return (<>
+            
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"></link>
             <style>
             {`
             .sidebar {
@@ -11,7 +11,7 @@ export default function PDFTemplate(props) {
             
             .sidebar li {
                 color: white;
-                font-family: &#x27;Roboto&#x27;;
+                font-family: 'Roboto';
             }
             
             body {
@@ -23,7 +23,7 @@ export default function PDFTemplate(props) {
             h1 {
                 margin: 0;
                 padding-left: 10px;
-                font-family: &#x27;Roboto&#x27;;
+                font-family: 'Roboto';
                 color: white;
             }
             
@@ -37,7 +37,7 @@ export default function PDFTemplate(props) {
             }
             
             .sidebarHeading {
-                font-family: &#x27;Roboto&#x27;;
+                font-family: 'Roboto';
                 border-bottom: 2px white solid;
                 color: white;
                 font-size: large;
@@ -48,7 +48,7 @@ export default function PDFTemplate(props) {
                 padding-left: 0 !important;
                 margin-left: 0 !important;
                 margin-right: 0 !important;
-                min-width: 100% !important;
+                max-width: 100% !important;
             }
             
             .mainpart {
@@ -64,7 +64,7 @@ export default function PDFTemplate(props) {
             }
             
             .mainHeading {
-                font-family: &#x27;Roboto&#x27;;
+                font-family: 'Roboto';
                 border-bottom: 2px solid #0081FB;
                 width: 95%;
                 font-size: large;
@@ -78,24 +78,17 @@ export default function PDFTemplate(props) {
                 margin-bottom: 0;
                 color: darkslategray;
             }
-
-            html {
-                height: 100%;
-            }
-
-            #__next {
-                height: 100%;
-            }
             `}
             </style>
+            <script src="https://kit.fontawesome.com/793a493ac1.js" crossorigin="anonymous"></script>
             <div className="h-100 container">
                 <div className="row">
-                    <div className="col-4 sidebar">
+                    <div style={{backgroundColor: "#0081FB"}}className="col-4 sidebar">
                         {props.name.split(' ').map(namePart => (<h1>{namePart}</h1>))}
                         <p className="sidebarHeading">CONTACT</p>
-                        <p><FaPhone size={10}></FaPhone>{props.number}</p>
-                        <p><FaEnvelope size={10}></FaEnvelope>{props.email}</p>
-                        <p><FaLocationArrow size={10}></FaLocationArrow>{props.location}</p>
+                        <p><i className="fa-solid fa-phone"></i>{props.number}</p>
+                        <p><i className="fa-solid fa-envelope"></i>{props.email}</p>
+                        <p><i className="fa-solid fa-location-dot"></i>{props.location}</p>
                         <p className="sidebarHeading">SKILLS</p>
                         <ul>
                             {props.skills.split('\n').map(skill => (<li>{skill}</li>))}

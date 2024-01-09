@@ -5,10 +5,16 @@ import { renderToStaticMarkup } from 'react-dom/server';
 export default async function handler(req, res) {
 
     try {
-        let htmlContent = renderToStaticMarkup(<PDFTemplate {...req.query}></PDFTemplate>)
+        let htmlContent = renderToStaticMarkup(<PDFTemplate {...req.query}></PDFTemplate>);
+        console.log(htmlContent);
         const browser = await puppeteer.launch({headless: "false"});
         const page = await browser.newPage();
-        await page.setContent(htmlContent, { waitUntil: 'networkidle0' });
+        await page.setViewport({
+            width: 702,
+            height: 993,
+            deviceScaleFactor: 1,
+        })
+        await page.setContent(htmlContent, { waitUntil: 'load' });
         const pdfBuffer = await page.pdf({ format: 'A4' });
         await browser.close();
 

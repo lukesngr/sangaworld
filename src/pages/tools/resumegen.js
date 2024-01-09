@@ -6,7 +6,7 @@ import PDFTemplate from '@/src/components/resumeGen/PDFTemplate';
 
 
 function ResumeGenerator() {
-    /*
+    
     return(<>
       <Meta siteTitle="Resume Generator" description="Resume generator I use to generate my resume"></Meta>
       <NavbarWithBanner current={1}></NavbarWithBanner>
