@@ -6,7 +6,6 @@ export default async function handler(req, res) {
 
     try {
         let htmlContent = renderToStaticMarkup(<PDFTemplate {...req.query}></PDFTemplate>);
-        console.log(htmlContent);
         const browser = await puppeteer.launch({headless: "false"});
         const page = await browser.newPage();
         await page.setViewport({
@@ -15,7 +14,9 @@ export default async function handler(req, res) {
             deviceScaleFactor: 1,
         })
         await page.setContent(htmlContent, { waitUntil: 'load' });
-        const pdfBuffer = await page.pdf({ format: 'A4' });
+        const contentToDEbug = await page.content();
+        console.log(contentToDEbug);
+        const pdfBuffer = await page.pdf({ format: 'A4', printBackground: true, scale: 2 });
         await browser.close();
 
         res.setHeader('Content-Type', 'application/pdf');
