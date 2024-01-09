@@ -19,33 +19,13 @@ export default function ResumeGeneratorForm() {
     const [degreeName, setDegreeName] = useState("");
     const [university, setUniversity] = useState("");
     const [certifications, setCertifications] = useState("");
-
-    useEffect(() => {
-      let newProps = {professionalSummary: 'iouoiuoi',
-      name: 'Luke Sanger',
-      number: '0475868381',
-      email: 'lukesngr@gmail.com',
-      location: 'Heathcote',
-      skills: 'React\nAWS',
-      workExpTime: 'fdsfds',
-      workExpLoc: 'dasd',
-      workExpRole: 'dasdas',
-      graduationDate: 'dasdas',
-      degreeName: 'dsadas',
-      university: 'dasdas'
-    };
-
-      let markup = renderToStaticMarkup(<PDFTemplate {...newProps}></PDFTemplate>);
-
-      
-    }, []);
     
     function handleSubmit(e) {
         e.preventDefault();
         axios.get('/api/generatePDF', {
             responseType: 'blob',
             params: {
-              professionalSummary, name, number, email, location, skills, workExpTime, workExpLoc, workExpRole, graduationDate, degreeName, university
+              professionalSummary, name, number, email, location, skills, workExpTime, workExpLoc, workExpRole, graduationDate, degreeName, university, certifications
             }
           })
           .then(function (response) {
