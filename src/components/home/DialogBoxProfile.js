@@ -22,8 +22,6 @@ function DialogBoxProfile() {
         }
     }, []);
 
-    console.log(mouseX, mouseY);
-
     useEffect(() => {
         if(mouseDown) {
             setTransformX((mouseX.new - mouseX.old)+transformX);
