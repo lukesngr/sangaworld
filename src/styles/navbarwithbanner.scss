@@ -21,8 +21,7 @@
     margin-left: 3em;
     height: 2em;
     border: 1px solid;
-    border-image-source: linear-gradient(theme.$normal-blue-color, theme.$normal-pink-color)  !important;
-    border-image-slice: 1 !important;
+    @include theme.normal-border;
     border-bottom: none;
     padding-left: 1em;
     padding-right: 1em;
@@ -38,7 +37,7 @@
 
 .currentPage {
     border-width: 3px;
-    border-image-source: linear-gradient(theme.$focused-blue-color, theme.$focused-pink-color) !important;
+    @include theme.focused-border;
 }
 
 li .toolsDropdown {
@@ -68,8 +67,7 @@ li .toolsDropdown:hover {
 }
 
 .toolsNav:hover .toolsDropdown li {
-    border-image-source: linear-gradient(theme.$normal-blue-color, theme.$normal-pink-color) !important;
-    border-image-slice: 1 !important;
+    @include theme.normal-border;
     border: 1px solid;
     
     a {
@@ -78,8 +76,7 @@ li .toolsDropdown:hover {
 }
 
 li .toolsDropdown:hover li {
-    border-image-source: linear-gradient(theme.$normal-blue-color, theme.$normal-pink-color) !important;
-    border-image-slice: 1 !important;
+    @include theme.normal-border;
     border: 1px solid;
 
     a {
@@ -150,8 +147,7 @@ li .toolsDropdown:hover li {
     .toolsDropdown li {
         background-color: theme.$base-color;
         list-style-type: none;
-        border-image-source: linear-gradient(theme.$normal-blue-color, theme.$normal-pink-color) !important;
-        border-image-slice: 1 !important;
+        @include theme.normal-border;
         border: 1px solid;
     }
 
