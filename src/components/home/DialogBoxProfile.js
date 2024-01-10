@@ -33,8 +33,19 @@ function DialogBoxProfile() {
 
     //minimize/close logic
 
+    
+
     const [dialogBoxStyle, setDialogBoxStyle] = useState("appear");
     const {dialogBoxHidden, setDialogBoxHidden} = useContext(DialogBoxContext);
+
+    useState(() => {
+        if(!dialogBoxHidden) {
+            setDialogBoxStyle("appear");
+            console.log("this should work")
+        }else{
+            console.log(dialogBoxStyle)
+        }
+    }, [dialogBoxHidden]);
 
     function minimizeDialog() {
         setDialogBoxHidden(true);
