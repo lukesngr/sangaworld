@@ -64,6 +64,7 @@ li .toolsDropdown:hover {
     position: absolute;
     background-color: theme.$base-color;
     transform: translate(-3em, -0.3em);
+    z-index: 999;
 }
 
 .toolsNav:hover .toolsDropdown li {
