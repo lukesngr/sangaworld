@@ -9,9 +9,10 @@ export default function PDFTemplate(props) {
                 background-color: #242321;
                 border-image-source: linear-gradient(#1399f2, #f538eb) !important;
                 border-left: none;
-                border-right: 3px solid;
+                border-right: 5px solid;
                 border-bottom: none;
                 border-top: none;
+                border-image-slice: 1;
             }
             
             .sidebar li {
@@ -71,7 +72,9 @@ export default function PDFTemplate(props) {
             
             .mainHeading {
                 font-family: 'Roboto';
-                border-bottom: 2px solid #0081FB;
+                border-bottom: 3px solid;
+                border-image-source: linear-gradient(to right, #7acaff, #ff7af8) !important;
+                border-image-slice: 1;
                 width: 95%;
                 font-size: large;
             }
