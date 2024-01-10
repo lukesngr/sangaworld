@@ -1,7 +1,8 @@
 import "../../styles/dialogboxprofile.scss";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { FaTimesCircle, FaMinusCircle } from "react-icons/fa";
+import { DialogBoxContext } from "@/src/pages/home";
 
 function DialogBoxProfile() {
 
@@ -33,8 +34,10 @@ function DialogBoxProfile() {
     //minimize/close logic
 
     const [dialogBoxStyle, setDialogBoxStyle] = useState("appear");
+    const {dialogBoxHidden, setDialogBoxHidden} = useContext(DialogBoxContext);
 
     function minimizeDialog() {
+        setDialogBoxHidden(true);
         setDialogBoxStyle("minimize");
     }
 
