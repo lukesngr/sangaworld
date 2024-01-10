@@ -32,7 +32,7 @@ function DialogBoxProfile() {
 
     return (
     <div style={{'transform': `translate(${transformX}px, ${transformY}px)`}} className="vaporDialog">
-        <div onMouseDown={() => setMouseDown(true)} onMouseUp={() => setMouseDown(false)} className="dialogTitle">
+        <div onMouseDown={() => setMouseDown(true)} onMouseUp={() => setMouseDown(false)} onMouseLeave={() =>setMouseDown(false)} className="dialogTitle">
             About Me <FaTimesCircle className="fakeExitButton" size={30} /><FaMinusCircle className="fakeMinusButton" size={30} />
         </div>
         <Image src="/me.jpg" width={700} height={700} alt="Picture of website" className="profilePicture" priority/>
