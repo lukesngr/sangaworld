@@ -1,17 +1,15 @@
 import { createContext, useState } from "react";
 
-const ScheduleContext = createContext();
+const DialogBoxContext = createContext();
 
-function ScheduleContextProvider({ children }) {
-    const [selectedSchedule, setSelectedSchedule] = useState("0");
-    const [selectedDate, setSelectedDate] = useState(dayjs());
-    const [expanded, setExpanded] = useState(true);
+function DialogBoxContextProvider({ children }) {
+    const [dialogBoxHidden, setDialogBoxHidden] = useState(false);
     
     return (
-      <ScheduleContext.Provider value={{ selectedSchedule, setSelectedSchedule, expanded, setExpanded, selectedDate, setSelectedDate }}>
+    <DialogBoxContext.Provider value={{dialogBoxHidden, setDialogBoxHidden}}>
         {children}
-      </ScheduleContext.Provider>
+    </DialogBoxContext.Provider>
     );
 };
 
-export { ScheduleContext, ScheduleContextProvider };
+export { DialogBoxContext, DialogBoxContextProvider };

@@ -2,7 +2,7 @@ import "../../styles/dialogboxprofile.scss";
 import Image from "next/image";
 import { useState, useEffect, useContext } from "react";
 import { FaTimesCircle, FaMinusCircle } from "react-icons/fa";
-import { DialogBoxContext } from "@/src/pages/home";
+import { DialogBoxContext } from "./DialogBoxContext";
 
 function DialogBoxProfile() {
 

@@ -1,6 +1,6 @@
 import { FaLinkedin, FaGithub, FaMedium } from "react-icons/fa";
 import '../../styles/footer.scss';
-import { DialogBoxContext } from "@/src/pages/home";
+import { DialogBoxContext } from "../home/DialogBoxContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 import { useContext } from "react";
