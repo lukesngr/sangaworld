@@ -35,13 +35,13 @@ function DialogBoxProfile() {
     const [dialogBoxStyle, setDialogBoxStyle] = useState("appear");
 
     function minimizeDialog() {
-        setDialogBoxStyle("disappear");
+        setDialogBoxStyle("minimize");
     }
 
     return (
     <div style={{'transform': `translate(${transformX}px, ${transformY}px)`}} className="vaporDialog" id={dialogBoxStyle}>
         <div onMouseDown={() => setMouseDown(true)} onMouseUp={() => setMouseDown(false)} onMouseLeave={() =>setMouseDown(false)} className="dialogTitle">
-            About Me <FaTimesCircle onClick={minimizeDialog} className="fakeExitButton" size={30} /><FaMinusCircle className="fakeMinusButton" size={30} />
+            About Me <FaTimesCircle className="fakeExitButton" size={30} /><FaMinusCircle onClick={minimizeDialog} className="fakeMinusButton" size={30} />
         </div>
         <Image src="/me.jpg" width={700} height={700} alt="Picture of website" className="profilePicture" priority/>
         <p className="dialogContent">

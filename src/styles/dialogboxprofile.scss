@@ -130,3 +130,15 @@
         max-width: none !important;
    }
 }
+
+@keyframes minimize {
+    0% { transform: scale(1.0); }
+    90% { transform: scale(0.1); }
+    100% {display: none; transform: scale(0.01);}
+}
+
+#minimize {
+    animation-name: minimize;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
