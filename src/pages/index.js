@@ -4,6 +4,7 @@ import Background from "../components/landing/Background";
 import AnimationToMain from "../components/landing/AnimationToMainPage";
 import { Suspense, useEffect, useState } from "react";
 import { useRouter } from 'next/router';
+import { Loader } from "../components/landing/Loader";
 
 function LandingPage() {
     const [dpr, setDpr] = useState(1);
@@ -20,7 +21,7 @@ function LandingPage() {
     return (
         <div style={{width: "100vw", height: "100vh"}}>
             <Canvas camera={{fov: 75, position: [0, 0, 30], aspect: aspectRatio}} dpr={dpr}>
-                <Suspense fallback={null}>
+                <Suspense fallback={<Loader />}>
                     <Background></Background>
                     <Computer></Computer>
                 </Suspense>
