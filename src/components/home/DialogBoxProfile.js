@@ -5,6 +5,7 @@ import { FaTimesCircle, FaMinusCircle } from "react-icons/fa";
 
 function DialogBoxProfile() {
 
+    //movement logic
     const [transformX, setTransformX] = useState(0);
     const [transformY, setTransformY] = useState(0);
     const [mouseDown, setMouseDown] = useState(false);
@@ -29,11 +30,18 @@ function DialogBoxProfile() {
         }
     }, [mouseX, mouseY]);
 
+    //minimize/close logic
+
+    const [dialogBoxStyle, setDialogBoxStyle] = useState("appear");
+
+    function minimizeDialog() {
+        setDialogBoxStyle("disappear");
+    }
 
     return (
-    <div style={{'transform': `translate(${transformX}px, ${transformY}px)`}} className="vaporDialog">
+    <div style={{'transform': `translate(${transformX}px, ${transformY}px)`}} className="vaporDialog" id={dialogBoxStyle}>
         <div onMouseDown={() => setMouseDown(true)} onMouseUp={() => setMouseDown(false)} onMouseLeave={() =>setMouseDown(false)} className="dialogTitle">
-            About Me <FaTimesCircle className="fakeExitButton" size={30} /><FaMinusCircle className="fakeMinusButton" size={30} />
+            About Me <FaTimesCircle onClick={minimizeDialog} className="fakeExitButton" size={30} /><FaMinusCircle className="fakeMinusButton" size={30} />
         </div>
         <Image src="/me.jpg" width={700} height={700} alt="Picture of website" className="profilePicture" priority/>
         <p className="dialogContent">
