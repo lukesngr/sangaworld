@@ -6,7 +6,12 @@ export default function PDFTemplate(props) {
             <style>
             {`
             .sidebar {
-                background-color: #0081FB;
+                background-color: #242321;
+                border-image-source: linear-gradient(#1399f2, #f538eb) !important;
+                border-left: none;
+                border-right: 3px solid;
+                border-bottom: none;
+                border-top: none;
             }
             
             .sidebar li {
@@ -86,7 +91,7 @@ export default function PDFTemplate(props) {
             
             <div className="h-100 container">
                 <div className="row">
-                    <div style={{backgroundColor: "#0081FB"}}className="col-4 sidebar">
+                    <div className="col-4 sidebar">
                         {props.name.split(' ').map(namePart => (<h1>{namePart}</h1>))}
                         <p className="sidebarHeading">CONTACT</p>
                         <p><FaPhone size={20}></FaPhone>{props.number}</p>
