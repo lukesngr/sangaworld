@@ -1,6 +1,6 @@
 import { FaEnvelope, FaPhone, FaMap } from "react-icons/fa";
 export default function PDFTemplate(props) {
-    console.log(props);
+    //not the most beautiful code but unfortunately it's this or inline styles as normal next css doesn't work
     return (<>
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"></link>
             <style>
