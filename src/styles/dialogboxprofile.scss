@@ -142,3 +142,14 @@
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
 }
+
+@keyframes close {
+    from { opacity: 1.0; }
+    to { opacity: 0; display: none;}
+}
+
+#close {
+    animation-name: close;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
