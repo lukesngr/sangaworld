@@ -1,6 +1,6 @@
 import { createContext, useState } from "react";
 
-const DialogBoxContext = createContext();
+const DialogBoxContext = createContext("");
 
 function DialogBoxContextProvider({ children }) {
     const [dialogBoxHidden, setDialogBoxHidden] = useState(false);
