@@ -31,6 +31,13 @@ export default function PDFTemplate(props) {
                 padding-left: 10px;
                 font-family: 'Roboto';
                 color: white;
+                font-family: 'Fox Cavalier';
+                background-image: linear-gradient(#1399f2, #c0c0c0, #f538eb);
+                background-clip: text;
+                -webkit-text-fill-color: transparent; 
+                -moz-text-fill-color: transparent;
+                -webkit-text-stroke-width: 0.2vw;
+                -webkit-text-stroke-color: white;
             }
             
             .sidebar p {
