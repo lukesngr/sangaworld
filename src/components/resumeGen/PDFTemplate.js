@@ -34,6 +34,7 @@ export default function PDFTemplate(props) {
                 font-family: 'Fox Cavalier';
                 background-image: linear-gradient(#1399f2, #c0c0c0, #f538eb);
                 background-clip: text;
+                -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent; 
                 -moz-text-fill-color: transparent;
                 -webkit-text-stroke-width: 0.2vw;
