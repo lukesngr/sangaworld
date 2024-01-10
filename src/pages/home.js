@@ -5,8 +5,6 @@ import Skills from "../components/home/Skills";
 import Meta from "../components/pageParts/Meta";
 import { DialogBoxContextProvider } from "../components/home/DialogBoxContext";
 
-
-
 function Home() {
     
     return (<>
