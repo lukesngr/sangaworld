@@ -3,8 +3,7 @@
 .navList {
     list-style-type: none;
     border-bottom: 3px solid;
-    border-image-source: linear-gradient(to right, theme.$normal-pink-color, theme.$normal-blue-color);
-    border-image-slice: 1;
+    @include theme.normal-border(to right);
     height: 2em;
     width: 100%;
     background-color: theme.$base-color;
