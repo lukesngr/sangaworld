@@ -8,7 +8,7 @@ import { DialogBoxContextProvider } from "../components/home/DialogBoxContext";
 function Home() {
     
     return (<>
-    <link rel="preload" href="/FoxCavalier.tff" as="font" type="font/tff" crossorigin></link>
+    <link rel="preload" href="/FoxCavalier.tff" as="font" type="font/tff" crossOrigin></link>
     <Meta siteTitle="Homepage" description="Homepage with summary of LUke Sanger's professional summary,  skills and contact points"></Meta>
     <NavbarWithBanner current={0} />
     <DialogBoxContextProvider>
