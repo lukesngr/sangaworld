@@ -103,14 +103,14 @@ export default function PDFTemplate(props) {
             <div className="h-100 container">
                 <div className="row">
                     <div className="col-4 sidebar">
-                        {props.name.split(' ').map(namePart => (<h1>{namePart}</h1>))}
+                        {props.name.split(' ').map((index, namePart) => (<h1 key={index}>{namePart}</h1>))}
                         <p className="sidebarHeading">CONTACT</p>
                         <p><FaPhone size={20}></FaPhone>{props.number}</p>
                         <p><FaEnvelope size={20}></FaEnvelope>{props.email}</p>
                         <p><FaMap size={20}></FaMap>{props.location}</p>
                         <p className="sidebarHeading">SKILLS</p>
                         <ul>
-                            {props.skills.split('\n').map(skill => (<li>{skill}</li>))}
+                            {props.skills.split('\n').map((index, skill) => (<li key={index}>{skill}</li>))}
                         </ul>
                     </div>
                     <div className="col mainpart">
@@ -121,7 +121,7 @@ export default function PDFTemplate(props) {
                         <b>{props.workExpRole}</b>
                         <p>{props.workExpLoc}</p>
                         <ul>
-                            {props.workExpDotpoints.split('\n').map(workExpDotpoint => (<li>{workExpDotpoint}</li>))}
+                            {props.workExpDotpoints.split('\n').map((index, workExpDotpoint) => (<li key={index}>{workExpDotpoint}</li>))}
                         </ul>
                         <p className="mainHeading">EDUCATION</p>
                         <p className="experienceTime">{props.graduationDate}</p>
@@ -129,7 +129,7 @@ export default function PDFTemplate(props) {
                         <p>{props.university}</p>
                         <p className="mainHeading">CERTIFICATIONS</p>
                         <ul>
-                            {props.certifications.split('\n').map(certification => (<li>{certification}</li>))}
+                            {props.certifications.split('\n').map((index, certification) => (<li key={index}>{certification}</li>))}
                         </ul>
                     </div>
             </div>
