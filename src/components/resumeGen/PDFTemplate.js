@@ -103,14 +103,14 @@ export default function PDFTemplate(props) {
             <div className="h-100 container">
                 <div className="row">
                     <div className="col-4 sidebar">
-                        {props.name.split(' ').map((index, namePart) => (<h1 key={index}>{namePart}</h1>))}
+                        {props.name.split(' ').map((namePart, index) => (<h1 key={index}>{namePart}</h1>))}
                         <p className="sidebarHeading">CONTACT</p>
                         <p><FaPhone size={20}></FaPhone>{props.number}</p>
                         <p><FaEnvelope size={20}></FaEnvelope>{props.email}</p>
                         <p><FaMap size={20}></FaMap>{props.location}</p>
                         <p className="sidebarHeading">SKILLS</p>
                         <ul>
-                            {props.skills.split('\n').map((index, skill) => (<li key={index}>{skill}</li>))}
+                            {props.skills.split('\n').map((skill, index)  => (<li key={index}>{skill}</li>))}
                         </ul>
                     </div>
                     <div className="col mainpart">
@@ -121,16 +121,19 @@ export default function PDFTemplate(props) {
                         <b>{props.workExpRole}</b>
                         <p>{props.workExpLoc}</p>
                         <ul>
-                            {props.workExpDotpoints.split('\n').map((index, workExpDotpoint) => (<li key={index}>{workExpDotpoint}</li>))}
+                            {props.workExpDotpoints.split('\n').map((workExpDotpoint, index) => (<li key={index}>{workExpDotpoint}</li>))}
                         </ul>
                         <p className="mainHeading">EDUCATION</p>
                         <p className="experienceTime">{props.graduationDate}</p>
                         <b>{props.degreeName}</b>
                         <p>{props.university}</p>
-                        <p className="mainHeading">CERTIFICATIONS</p>
-                        <ul>
-                            {props.certifications.split('\n').map((index, certification) => (<li key={index}>{certification}</li>))}
-                        </ul>
+                        {props.certifications.length > 0 && 
+                        (<>
+                            <p className="mainHeading">CERTIFICATIONS</p>
+                            <ul>
+                                {props.certifications.split('\n').map((certification, index) => (<li key={index}>{certification}</li>))}
+                            </ul>
+                        </>)}
                     </div>
             </div>
             </div>
