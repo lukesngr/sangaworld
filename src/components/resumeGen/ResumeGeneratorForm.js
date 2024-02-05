@@ -20,13 +20,14 @@ export default function ResumeGeneratorForm() {
     const [degreeName, setDegreeName] = useState("");
     const [university, setUniversity] = useState("");
     const [certifications, setCertifications] = useState("");
+    const [projects, setProjects] = useState("");
     
     function handleSubmit(e) {
         e.preventDefault();
         axios.get('/api/generatePDF', {
             responseType: 'blob',
             params: {
-              professionalSummary, name, number, email, location, skills, workExpTime, workExpLoc, workExpRole, graduationDate, degreeName, university, certifications, workExpDotpoints
+              professionalSummary, name, number, email, location, skills, workExpTime, workExpLoc, workExpRole, graduationDate, degreeName, university, certifications, workExpDotpoints, projects
             }
           })
           .then(function (response) {
@@ -74,6 +75,8 @@ export default function ResumeGeneratorForm() {
             <input name="university" type="text" value={university} onChange={(e) => setUniversity(e.target.value)} required></input><br />
             <label htmlFor='certifications'>Certifications:</label><br />
             <textarea name="certifications" type="text" rows="4" cols="50" value={certifications} onChange={(e) => setCertifications(e.target.value)}></textarea><br />
+            <label htmlFor='projects'>Projects:</label><br />
+            <textarea name="projects" type="text" rows="4" cols="50" value={projects} onChange={(e) => setProjects(e.target.value)}></textarea><br />
             <button type='submit'>Generate</button>
         </form> );
 }

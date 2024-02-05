@@ -134,6 +134,13 @@ export default function PDFTemplate(props) {
                                 {props.certifications.split('\n').map((certification, index) => (<li key={index}>{certification}</li>))}
                             </ul>
                         </>)}
+                        {props.projects.length > 0 && 
+                        (<>
+                            <p className="mainHeading">PROJECTS</p>
+                            <ul>
+                                {props.projects.split('\n').map((project, index) => (<li key={index}>{project}</li>))}
+                            </ul>
+                        </>)}
                     </div>
             </div>
             </div>
