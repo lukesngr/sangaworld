@@ -24,7 +24,7 @@ export default function ResumeGeneratorForm() {
     
     function handleSubmit(e) {
         e.preventDefault();
-        axios.get('/api/generatePDF', {
+        /*axios.get('/api/generatePDF', {
             responseType: 'blob',
             params: {
               professionalSummary, name, number, email, location, skills, workExpTime, workExpLoc, workExpRole, graduationDate, degreeName, university, certifications, workExpDotpoints, projects
@@ -37,7 +37,16 @@ export default function ResumeGeneratorForm() {
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
-          })
+          })*/
+        let params = {
+            professionalSummary, name, number, email, location, skills, workExpTime, workExpLoc, workExpRole, graduationDate, degreeName, university, certifications, workExpDotpoints, projects
+        }
+
+        const resume = new jsPDF();
+        let htmlContent = renderToStaticMarkup(<PDFTemplate {...params}></PDFTemplate>);
+        resume.html(htmlContent).then(() => {
+            resume.save('resume.pdf');
+        })
     }
 
     return (
