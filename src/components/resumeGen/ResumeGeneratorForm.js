@@ -41,12 +41,7 @@ export default function ResumeGeneratorForm() {
         }
 
         let htmlContent = renderToStaticMarkup(<PDFTemplate {...params}></PDFTemplate>);
-        html2pdf().set({
-          margin:       1,
-          filename:     'myfile.pdf',
-          html2canvas:  { scale: 1.3, windowWidth: 702, windowHeight: 993},
-          jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
-        }).from(htmlContent).save();
+        html2pdf().from(htmlContent).save();
     }
 
     return (
