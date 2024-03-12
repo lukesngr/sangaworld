@@ -2,8 +2,6 @@ import { useEffect, useState } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import PDFTemplate from './PDFTemplate';
 import '../../styles/resumegenerator.scss';
-import axios from 'axios';
-import jsPDF from 'jspdf';
 
 export default function ResumeGeneratorForm() {
     const [professionalSummary, setProfessionalSummary] = useState("");
@@ -42,14 +40,18 @@ export default function ResumeGeneratorForm() {
             professionalSummary, name, number, email, location, skills, workExpTime, workExpLoc, workExpRole, graduationDate, degreeName, university, certifications, workExpDotpoints, projects
         }
 
-        const resume = new jsPDF();
         let htmlContent = renderToStaticMarkup(<PDFTemplate {...params}></PDFTemplate>);
-        resume.html(htmlContent).then(() => {
-            resume.save('resume.pdf');
-        })
+        html2pdf().set({
+          margin:       1,
+          filename:     'myfile.pdf',
+          html2canvas:  { scale: 1.3, windowWidth: 702, windowHeight: 993},
+          jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+        }).from(htmlContent).save();
     }
 
     return (
+      <>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <form onSubmit={handleSubmit} className="resumeGeneratorForm">
             <h1>Resume Generator</h1>
             <p>Generator I used to generate my resume</p>
@@ -87,5 +89,6 @@ export default function ResumeGeneratorForm() {
             <label htmlFor='projects'>Projects:</label><br />
             <textarea name="projects" type="text" rows="4" cols="50" value={projects} onChange={(e) => setProjects(e.target.value)}></textarea><br />
             <button type='submit'>Generate</button>
-        </form> );
+        </form>
+      </>);
 }
