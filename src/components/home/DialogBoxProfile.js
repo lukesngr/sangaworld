@@ -53,11 +53,13 @@ function DialogBoxProfile() {
     }
 
     return (
-    <div style={{'transform': `translate(${transformX}px, ${transformY}px)`}} className="vaporDialog" id={dialogBoxStyle}>
-        <div onMouseDown={() => setMouseDown(true)} onMouseUp={() => setMouseDown(false)} onMouseLeave={() =>setMouseDown(false)} className="dialogTitle">
-            Me <FaTimesCircle onClick={closeDialog} className="fakeExitButton" size={30} /><FaMinusCircle onClick={minimizeDialog} className="fakeMinusButton" size={30} />
+    <div className="dialogContainer">
+        <div style={{'transform': `translate(${transformX}px, ${transformY}px)`}} className="vaporDialog" id={dialogBoxStyle}>
+            <div onMouseDown={() => setMouseDown(true)} onMouseUp={() => setMouseDown(false)} onMouseLeave={() =>setMouseDown(false)} className="dialogTitle">
+                Me <FaTimesCircle onClick={closeDialog} className="fakeExitButton" size={30} /><FaMinusCircle onClick={minimizeDialog} className="fakeMinusButton" size={30} />
+            </div>
+            <Image src="/me.jpg" width={700} height={700} alt="Picture of Luke Sanger" className="profilePicture" priority/>
         </div>
-        <Image src="/me.jpg" width={700} height={700} alt="Picture of Luke Sanger" className="profilePicture" priority/>
     </div>
     )
 }
