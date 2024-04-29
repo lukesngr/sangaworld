@@ -55,16 +55,9 @@ function DialogBoxProfile() {
     return (
     <div style={{'transform': `translate(${transformX}px, ${transformY}px)`}} className="vaporDialog" id={dialogBoxStyle}>
         <div onMouseDown={() => setMouseDown(true)} onMouseUp={() => setMouseDown(false)} onMouseLeave={() =>setMouseDown(false)} className="dialogTitle">
-            About Me <FaTimesCircle onClick={closeDialog} className="fakeExitButton" size={30} /><FaMinusCircle onClick={minimizeDialog} className="fakeMinusButton" size={30} />
+            Me <FaTimesCircle onClick={closeDialog} className="fakeExitButton" size={30} /><FaMinusCircle onClick={minimizeDialog} className="fakeMinusButton" size={30} />
         </div>
         <Image src="/me.jpg" width={700} height={700} alt="Picture of website" className="profilePicture" priority/>
-        <p className="dialogContent">
-        My name is Luke Sanger, I have just finished a degree in Computer Science at University of Wollongong. <br />
-        For over five years, I have honed my IT skills in a real-world setting at HOYTS, where I hold the position of a Service Desk Specialist. <br />
-        My life isn't just limited to university and professional work - I also have a keen enthusiasm for AI and Web Development that goes beyond the classroom. <br />
-        Outside of tech, I am an ardent fan of Hardstyle and Vaporwave music genres and love to go to HSU events. <br />
-        </p>
-        <a href="/myresume.pdf" className="downloadResumeButton" target='_blank' rel='noopener noreferrer'>Download Resume</a>
     </div>
     )
 }
