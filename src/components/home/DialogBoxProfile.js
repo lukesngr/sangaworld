@@ -57,7 +57,7 @@ function DialogBoxProfile() {
         <div onMouseDown={() => setMouseDown(true)} onMouseUp={() => setMouseDown(false)} onMouseLeave={() =>setMouseDown(false)} className="dialogTitle">
             Me <FaTimesCircle onClick={closeDialog} className="fakeExitButton" size={30} /><FaMinusCircle onClick={minimizeDialog} className="fakeMinusButton" size={30} />
         </div>
-        <Image src="/me.jpg" width={700} height={700} alt="Picture of website" className="profilePicture" priority/>
+        <Image src="/me.jpg" width={700} height={700} alt="Picture of Luke Sanger" className="profilePicture" priority/>
     </div>
     )
 }
