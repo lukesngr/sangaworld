@@ -41,7 +41,6 @@ export default function ResumeGeneratorForm() {
         }
 
         let htmlContent = renderToStaticMarkup(<PDFTemplate {...params}></PDFTemplate>);
-        html2pdf().from(htmlContent).save();
     }
 
     return (
