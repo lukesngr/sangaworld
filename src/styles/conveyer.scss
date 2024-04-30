@@ -32,6 +32,7 @@
     font-family: 'PT Sans', sans-serif;
     width: fit-content;
     display: block;
+    animation: movingThroughAssemblyLine 2s linear infinite;
 }
 
 @keyframes movingThroughAssemblyLine {
@@ -46,7 +47,15 @@
     }
 
     60% {
-        transform: rotate(0deg) scale(1.0) translate(2vw, 33vw);
+        transform: rotate(0deg) scale(1.0) translate(40vw, 10vw);
+    }
+
+    80% {
+        transform: rotateZ(45deg) scale(1.0) translate(44vw, -23vw);
+    }
+
+    100% {
+        transform: rotateZ(90deg) scale(1.0) translate(26vw, -53vw);
     }
     
 }
