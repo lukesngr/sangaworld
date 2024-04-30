@@ -4,6 +4,7 @@ import Footer from "../components/pageParts/Footer";
 import Skills from "../components/home/Skills";
 import Meta from "../components/pageParts/Meta";
 import { DialogBoxContextProvider } from "../components/home/DialogBoxContext";
+import ConveyerBelt from "../components/home/ConveyerBelt";
 
 function Home() {
     
@@ -13,7 +14,7 @@ function Home() {
     <NavbarWithBanner current={0} />
     <DialogBoxContextProvider>
         <DialogBoxProfile />
-        <Skills></Skills>
+        <ConveyerBelt />
         <Footer></Footer>
     </DialogBoxContextProvider>
     </>)
