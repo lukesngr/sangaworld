@@ -10,12 +10,13 @@ export default function ConveyerBelt() {
 
     useEffect(() => {
         intervalRef.current = setInterval(() => {
-            if(selection <= 3) {
-                selection = selection + 1;
+            selection = selection + 1;
+            if(selection <= words.length - 1) {
+                console.log(selection, words[selection])
                 setText(words[selection]);
             }else{
                 selection = 0;
-                setText(words[selection]);
+                setText(words[0]);
             }
         }, 2000)
         return () => {
