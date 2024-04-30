@@ -1,18 +1,18 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import '../../styles/conveyer.scss'
 
 export default function ConveyerBelt() {
 
     const words = ["Passionate", "Driven", "Responsible", "Innovative"];
-    let selection = 0;
+    const [selection, setSelection] = useState(0);
     const intervalRef = useRef(null);
 
     useEffect(() => {
         intervalRef.current = setInterval(() => {
             if(selection > 3) {
-                selection = selection + 1;
+                setSelection(selection+1);
             }else{
-                selection = 0;
+                setSelection(0);
             }
         }, 1000)
         return () => {

@@ -10,6 +10,8 @@
     width: 20%;
     height: auto;
     display: block;
+    z-index: 999;
+    position: relative;
 }
 
 .scene {
@@ -23,4 +25,28 @@
     margin-left: auto;
     margin-right: auto;
     display: block;
+}
+
+.word {
+    color: white;
+    font-family: 'PT Sans', sans-serif;
+    width: fit-content;
+    display: block;
+}
+
+@keyframes movingThroughAssemblyLine {
+    0% {
+        transform: rotate(9deg) scale(0.9) translateX(-3.5vw);
+    }
+    5% {
+        transform: rotate(0deg) scale(1.0) translate(2vw, 0);
+    }
+    10% {
+        transform: rotate(0deg) scale(1.0) translate(2vw, 10vw);
+    }
+
+    60% {
+        transform: rotate(0deg) scale(1.0) translate(2vw, 33vw);
+    }
+    
 }
