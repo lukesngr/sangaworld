@@ -1,0 +1,13 @@
+@use 'theme';
+
+.conveyerBelt {
+    width: 40%;
+    height: auto;
+}
+
+.scene {
+    background-color: theme.$base-color;
+    height: fit-content;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
