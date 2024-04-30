@@ -33,6 +33,7 @@
     width: fit-content;
     display: block;
     animation: movingThroughAssemblyLine 2s linear infinite;
+    font-size: 2em;
 }
 
 @keyframes movingThroughAssemblyLine {
@@ -46,11 +47,11 @@
         transform: rotate(0deg) scale(1.0) translate(2vw, 10vw);
     }
 
-    60% {
+    80% {
         transform: rotate(0deg) scale(1.0) translate(40vw, 10vw);
     }
 
-    80% {
+    90% {
         transform: rotateZ(45deg) scale(1.0) translate(44vw, -23vw);
     }
 

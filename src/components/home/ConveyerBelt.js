@@ -4,17 +4,20 @@ import '../../styles/conveyer.scss'
 export default function ConveyerBelt() {
 
     const words = ["Passionate", "Driven", "Responsible", "Innovative"];
-    const [selection, setSelection] = useState(0);
+    let selection = 0;
+    const [text, setText] = useState(words[0]);
     const intervalRef = useRef(null);
 
     useEffect(() => {
         intervalRef.current = setInterval(() => {
-            if(selection > 3) {
-                setSelection(selection+1);
+            if(selection <= 3) {
+                selection = selection + 1;
+                setText(words[selection]);
             }else{
-                setSelection(0);
+                selection = 0;
+                setText(words[selection]);
             }
-        }, 1000)
+        }, 2000)
         return () => {
             clearInterval(intervalRef.current);
         }
@@ -24,7 +27,7 @@ export default function ConveyerBelt() {
     <div className="scene">
         <div className="conveyerBeltSection">
             <img src="/chute.png" className='chute' alt='chute'/>
-            <span className="word">{words[selection]}</span>
+            <span className="word">{text}</span>
             <img src="/conveyerbelt.png" className='conveyerBelt' alt='conveyer belt'/>
         </div>
     </div>)
