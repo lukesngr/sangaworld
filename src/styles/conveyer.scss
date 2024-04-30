@@ -1,16 +1,27 @@
 @use 'theme';
 
 .conveyerBelt {
-    width: 40%;
+    width: 100%;
     height: auto;
-    margin-left: auto;
-    margin-right: auto;
+    margin-top: 10vw;
+}
+
+.chute {
+    width: 20%;
+    height: auto;
     display: block;
 }
 
 .scene {
     background-color: theme.$base-color;
     height: fit-content;
-    padding-top: 10em;
     padding-bottom: 10em;
+}
+
+.conveyerBeltSection {
+    width: 40%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
