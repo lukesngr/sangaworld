@@ -3,11 +3,14 @@
 .conveyerBelt {
     width: 40%;
     height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 
 .scene {
     background-color: theme.$base-color;
     height: fit-content;
-    padding-top: 2em;
-    padding-bottom: 2em;
+    padding-top: 10em;
+    padding-bottom: 10em;
 }
