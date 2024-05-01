@@ -96,6 +96,15 @@
     }
 }
 
+@keyframes moveInWithScrollResponsive {
+    0% {
+        transform: translate(0vh, 0vh);
+    }
+    100% {
+        transform: translate(31vw, 0vh);
+    }
+}
+
 @keyframes turnOnWithScroll {
     0% {
         color: black;
@@ -134,3 +143,32 @@
         animation-range: 10vh 40vh;
     }
   }
+
+@media only screen and (max-width: 900px) {
+    .pipeIntake {
+        display: none;
+    }
+
+    .dotPointsContainer {
+        margin-left: 5%;
+    }
+
+    .myStoryHeading {
+        position: relative;
+        animation: moveInWithScrollResponsive linear both;
+        animation-timeline: view();
+        animation-range: 10vh 40vh;
+    }
+
+
+    .underLine {
+        margin-left: 5%;
+        width: 95%;
+    }
+
+    .dotPoint {
+        position: absolute;
+        transform: translate(4vh, -3vh);
+        width: 85%;
+    }
+}
