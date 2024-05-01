@@ -7,6 +7,9 @@
     margin-right: auto;
     display: block;
     width: 100%;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .vaporDialog {
