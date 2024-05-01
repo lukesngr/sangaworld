@@ -1,6 +1,13 @@
 @use 'theme';
 
 .hiringDiv {
-    height: 2vh;
+    height: 20vh;
     background-color: theme.$focused-pink-color;
+    color: white;
+    font-family: 'Arial';
+}
+
+.hiringDiv a {
+    color: black;
+    
 }
