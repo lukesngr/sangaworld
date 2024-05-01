@@ -5,21 +5,29 @@
     background-color: white;
 }
 
-.pipeOutlet {
-    margin-left: 86.5%;
-    height: 5vh;
+.pipeIntake {
+    margin-left: 85%;
+    width: 4em;
+}
+
+.pipeIntakeReceiver {
+    height: 6vh;
     background-color: theme.$normal-blue-color;
-    width: 2em;
     position: relative;
     z-index: 999;
 }
 
-.intakePipe {
-    margin-left: 85%;
-    height: 6vh;
+.pipeOutlet {
+    height: 5vh;
     background-color: theme.$normal-blue-color;
-    width: 4em;
+    width: 50%;
+    position: relative;
+    z-index: 999;
+    margin-left: auto;
+    margin-right: auto;
 }
+
+
 
 .outtakePipe {
     height: 6vh;
@@ -29,7 +37,7 @@
 
 .underLine {
     margin-left: 25%;
-    width: 64.8%;
+    width: calc(3em + 60%);
     background-color: theme.$normal-blue-color;
     height: 1em;
 }
@@ -73,12 +81,18 @@
     transform: translate(9vh, -3vh);
 }
 
+.dotPointsMarginFinal {
+    background-color: theme.$normal-blue-color;
+    width: 1em;
+    height: 40%;
+}
+
 @keyframes moveInWithScroll {
     0% {
         transform: translate(0vh, -8vh);
     }
     100% {
-        transform: translate(31vh, -8vh);
+        transform: translate(31vw, -8vh);
     }
 }
 

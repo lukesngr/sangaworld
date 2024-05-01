@@ -3,9 +3,10 @@ import '../../styles/mystory.scss';
 export default function MyStory() {
     return <>
     <div className="myStory">
-        <div className='intakePipe'>
+        <div className='pipeIntake'>
+            <div className='pipeIntakeReceiver'></div>
+            <div class="pipeOutlet"></div>
         </div>
-        <div class="pipeOutlet"></div>
         <h1 className='myStoryHeading'>My Story</h1>
         <div className='underLine'>
         </div>
@@ -25,8 +26,7 @@ export default function MyStory() {
             <div className='dotPointsMargin'></div>
             <span className='time'>2024</span>
             <span className='dotPoint'>Graduated university, looking for an opportunity to learn and improve my skills</span>
-            <div className='dotPointsMargin'></div>
-            <div className='outtakePipe'></div>
+            <div className='dotPointsMarginFinal'></div>
         </div>
     </div></>
 }
