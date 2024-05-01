@@ -158,6 +158,7 @@
         animation: moveInWithScrollResponsive linear both;
         animation-timeline: view();
         animation-range: 10vh 40vh;
+        width: fit-content;
     }
 
 
