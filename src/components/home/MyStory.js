@@ -26,6 +26,7 @@ export default function MyStory() {
             <span className='time'>2024</span>
             <span className='dotPoint'>Graduated university, looking for an opportunity to learn and improve my skills</span>
             <div className='dotPointsMargin'></div>
+            <div className='outtakePipe'></div>
         </div>
     </div></>
 }

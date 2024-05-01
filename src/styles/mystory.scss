@@ -21,6 +21,12 @@
     width: 4em;
 }
 
+.outtakePipe {
+    height: 6vh;
+    background-color: theme.$focused-blue-color;
+    width: 4em;
+}
+
 .underLine {
     margin-left: 25%;
     width: 64.8%;
@@ -90,6 +96,11 @@
     }
 }
 
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
 @media (prefers-reduced-motion: no-preference) {
     .myStoryHeading {
       animation: moveInWithScroll linear both;
@@ -103,5 +114,9 @@
         animation-range: 10vh 35vh;
     }
 
-    
+    .dotPoint {
+        animation: fadeIn 1s linear both;
+        animation-timeline: view();
+        animation-range: 10vh 40vh;
+    }
   }
