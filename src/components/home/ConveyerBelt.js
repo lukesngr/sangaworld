@@ -3,7 +3,7 @@ import '../../styles/conveyer.scss'
 
 export default function ConveyerBelt() {
 
-    const words = ["Passionate", "Driven", "Innovative", "Fullstack Developer"];
+    const words = ["Passionate", "Driven", "Innovative", "Fullstack", "Developer"];
     let selection = 0;
     const [text, setText] = useState(words[0]);
     const intervalRef = useRef(null);
