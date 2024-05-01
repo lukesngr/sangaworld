@@ -1,0 +1,6 @@
+@use 'theme';
+
+.hiringDiv {
+    height: 2vh;
+    background-color: theme.$focused-pink-color;
+}

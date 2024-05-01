@@ -6,6 +6,7 @@ import Meta from "../components/pageParts/Meta";
 import { DialogBoxContextProvider } from "../components/home/DialogBoxContext";
 import ConveyerBelt from "../components/home/ConveyerBelt";
 import MyStory from "../components/home/MyStory";
+import Hiring from "../components/home/Hiring";
 
 function Home() {
     
@@ -17,6 +18,7 @@ function Home() {
         <DialogBoxProfile />
         <ConveyerBelt />
         <MyStory />
+        <Hiring />
         <Footer></Footer>
     </DialogBoxContextProvider>
     </>)
