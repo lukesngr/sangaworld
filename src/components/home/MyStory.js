@@ -11,8 +11,7 @@ export default function MyStory() {
         </div>
         <div className='dotPointsContainer'>
             <div className='dotPointsMargin'></div>
-            <div className='time'></div>
-
+            <div className='time'>2019</div>
         </div>
     </div></>
 }

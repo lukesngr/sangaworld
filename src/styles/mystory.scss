@@ -30,26 +30,39 @@
 
 .dotPointsContainer {
     margin-left: 25%;
+    height: 100%;
 }
 
 .dotPointsMargin {
     background-color: theme.$focused-blue-color;
     width: 1em;
+    height: 20%;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
 .myStoryHeading {
-    font-family: 'Dancing Script', sans-serif;
-    font-size: 2em;
+    font-family: 'Dancing Script', cursive;
+    font-size: 4em;
     color: black;
     position: absolute;
 }
 
+.time {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    background-color: theme.$focused-pink-color;
+    border-radius: 25px;
+    border: 1px solid theme.$focused-pink-color;
+    width: fit-content;
+}
+
 @keyframes moveInWithScroll {
     0% {
-        transform: translate(0vh, -4vh);
+        transform: translate(0vh, -8vh);
     }
     100% {
-        transform: translate(31vh, -4vh);
+        transform: translate(31vh, -8vh);
     }
 }
 
