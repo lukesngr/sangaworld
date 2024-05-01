@@ -60,3 +60,34 @@
     }
     
 }
+
+@keyframes movingThroughAssemblyLine {
+    0% {
+        transform: rotate(9deg) scale(0.9) translateX(-3.5vw);
+    }
+    5% {
+        transform: rotate(0deg) scale(1.0) translate(2vw, 0);
+    }
+    10% {
+        transform: rotate(0deg) scale(1.0) translate(2vw, 10vw);
+    }
+
+    80% {
+        transform: rotate(0deg) scale(1.0) translate(40vw, 10vw);
+    }
+
+    90% {
+        transform: rotateZ(45deg) scale(1.0) translate(44vw, -23vw);
+    }
+
+    100% {
+        transform: rotateZ(90deg) scale(1.0) translate(26vw, -53vw);
+    }
+    
+}
+
+@media only screen and (max-width: 900px) {
+    .conveyerBeltSection {
+        width: 80%;
+    }
+}
