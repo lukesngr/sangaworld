@@ -11,7 +11,20 @@ export default function MyStory() {
         </div>
         <div className='dotPointsContainer'>
             <div className='dotPointsMargin'></div>
-            <div className='time'>2019</div>
+            <span className='time time-1'>2019</span>
+            <span className='dotPoint'>Started my professional journey as a Service Desk Specialist at HOYTS</span>
+            <div className='dotPointsMargin'></div>
+            <span className='time time-2'>2021</span>
+            <span className='dotPoint'>Started degree in Computer Science at UOW with Software Engineering Major</span>
+            <div className='dotPointsMargin'></div>
+            <span className='time time-3'>2022</span>
+            <span className='dotPoint'>Improved my ability with C++ and Java, started building Android apps</span>
+            <div className='dotPointsMargin'></div>
+            <span className='time time-4'>2023</span>
+            <span className='dotPoint'>Started learning aand building projects in Next.JS, React, SpringBoot, AI and Frontend Development</span>
+            <div className='dotPointsMargin'></div>
+            <span className='time time-5'>2024</span>
+            <span className='dotPoint'>Graduated university, looking for an opportunity to learn and improve my skills</span>
         </div>
     </div></>
 }

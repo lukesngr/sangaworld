@@ -55,6 +55,16 @@
     border-radius: 25px;
     border: 1px solid theme.$focused-pink-color;
     width: fit-content;
+    transform: translateX(-34%);
+    position: relative;
+    margin: 0;
+    font-size: 1.2em;
+    display: block;
+}
+
+.dotPoint {
+    position: absolute;
+    transform: translate(9vh, -3vh);
 }
 
 @keyframes moveInWithScroll {
