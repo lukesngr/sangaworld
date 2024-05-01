@@ -76,10 +76,32 @@
     }
 }
 
+@keyframes turnOnWithScroll {
+    0% {
+        color: black;
+        background-color: theme.$focused-blue-color;
+        border-color: theme.$focused-blue-color;
+    }
+
+    100% {
+        color: white;
+        background-color: theme.$focused-pink-color;
+        border-color: theme.$focused-pink-color;
+    }
+}
+
 @media (prefers-reduced-motion: no-preference) {
     .myStoryHeading {
       animation: moveInWithScroll linear both;
       animation-timeline: view();
       animation-range: 10vh 40vh;
     }
+
+    .time {
+        animation: turnOnWithScroll linear both;
+        animation-timeline: view();
+        animation-range: 10vh 35vh;
+    }
+
+    
   }
