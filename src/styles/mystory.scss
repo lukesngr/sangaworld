@@ -8,13 +8,22 @@
 .pipeOutlet {
     margin-left: 86.5%;
     height: 5vh;
-    background-color: blue;
+    background-color: theme.$focused-blue-color;
     width: 2em;
+    position: relative;
+    z-index: 999;
 }
 
 .intakePipe {
     margin-left: 85%;
     height: 6vh;
-    background-color: blue;
+    background-color: theme.$focused-blue-color;
     width: 4em;
+}
+
+.underLine {
+    margin-left: 25%;
+    width: 64.8%;
+    background-color: theme.$focused-blue-color;
+    height: 1em;
 }
