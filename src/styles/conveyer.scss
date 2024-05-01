@@ -61,7 +61,7 @@
     
 }
 
-@keyframes movingThroughAssemblyLine {
+@keyframes movingThroughAssemblyLineResponsive {
     0% {
         transform: rotate(9deg) scale(0.9) translateX(-3.5vw);
     }
@@ -72,16 +72,8 @@
         transform: rotate(0deg) scale(1.0) translate(2vw, 10vw);
     }
 
-    80% {
-        transform: rotate(0deg) scale(1.0) translate(40vw, 10vw);
-    }
-
-    90% {
-        transform: rotateZ(45deg) scale(1.0) translate(44vw, -23vw);
-    }
-
     100% {
-        transform: rotateZ(90deg) scale(1.0) translate(26vw, -53vw);
+        transform: rotateZ(0deg) scale(1.0) translate(100vw, 10vw);
     }
     
 }
@@ -89,5 +81,9 @@
 @media only screen and (max-width: 900px) {
     .conveyerBeltSection {
         width: 80%;
+    }
+
+    .word {
+        animation: movingThroughAssemblyLineResponsive 2s linear infinite;
     }
 }
