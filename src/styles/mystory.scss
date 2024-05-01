@@ -28,6 +28,15 @@
     height: 1em;
 }
 
+.dotPointsContainer {
+    margin-left: 25%;
+}
+
+.dotPointsMargin {
+    background-color: theme.$focused-blue-color;
+    width: 1em;
+}
+
 .myStoryHeading {
     font-family: 'Dancing Script', sans-serif;
     font-size: 2em;

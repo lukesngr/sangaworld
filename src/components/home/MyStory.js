@@ -9,6 +9,10 @@ export default function MyStory() {
         <h1 className='myStoryHeading'>My Story</h1>
         <div className='underLine'>
         </div>
-        <div className='dotPoints'></div>
+        <div className='dotPointsContainer'>
+            <div className='dotPointsMargin'></div>
+            <div className='time'></div>
+
+        </div>
     </div></>
 }
