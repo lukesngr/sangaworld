@@ -27,3 +27,27 @@
     background-color: theme.$focused-blue-color;
     height: 1em;
 }
+
+.myStoryHeading {
+    font-family: 'Dancing Script', sans-serif;
+    font-size: 2em;
+    color: black;
+    position: absolute;
+}
+
+@keyframes moveInWithScroll {
+    0% {
+        transform: translate(0vh, -4vh);
+    }
+    100% {
+        transform: translate(31vh, -4vh);
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .myStoryHeading {
+      animation: moveInWithScroll linear both;
+      animation-timeline: view();
+      animation-range: 10vh 40vh;
+    }
+  }
